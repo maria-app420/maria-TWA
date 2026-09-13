@@ -1,0 +1,98 @@
+PH Y EC/PPM: QUÉ SON Y CÓMO INTERPRETARLOS
+
+pH
+Indica la acidez o alcalinidad de la solución. Influye en la disponibilidad de nutrientes.
+
+EC
+La conductividad eléctrica estima la cantidad de material iónico disuelto. En cultivo se utiliza como referencia de concentración de sales.
+
+PPM
+Es una conversión o escala derivada de la EC. Diferentes medidores pueden utilizar factores de conversión distintos, por lo que dos valores de PPM no siempre son comparables directamente.
+
+INTERPRETACIÓN
+pH y EC deben interpretarse junto con el sistema: tierra, coco o hidroponía.
+
+CAMBIOS
+Una EC demasiado alta puede indicar una solución concentrada o acumulación de sales. Una EC muy baja puede indicar poca concentración, aunque no diagnostica por sí sola una deficiencia.
+
+ERROR FRECUENTE
+Usar un número de EC o PPM de otro sistema como si fuera universal.
+
+CONCEPTO CLAVE
+Medir no sirve si no se conoce qué escala se está usando y qué sistema de cultivo se está manejando.
+
+
+MEDIDORES DE pH Y EC - USO, CALIBRACIÓN Y MANTENIMIENTO:
+
+DESCRIPCIÓN
+Los medidores de pH y de EC/PPM son instrumentos electrónicos que, si
+no se usan y mantienen correctamente, pueden dar lecturas incorrectas
+y llevar a decisiones de manejo equivocadas. Este tema detalla cómo
+usarlos y conservarlos en buen estado.
+
+TIPOS DE MEDIDORES MÁS COMUNES
+- Medidor de pH digital tipo "lápiz" (pH-metro): se sumerge
+  directamente en el líquido a medir, mostrando el valor en una
+  pequeña pantalla.
+- Medidor de EC/PPM digital: similar en formato al de pH, mide la
+  conductividad eléctrica de la solución.
+- Medidores combinados: existen equipos que miden pH, EC y en
+  algunos casos también temperatura, todo en un solo instrumento.
+- Kits líquidos o tiras reactivas de pH: alternativa más económica
+  pero menos precisa que los medidores digitales.
+
+CALIBRACIÓN DEL MEDIDOR DE pH (PASO FUNDAMENTAL)
+- Los medidores digitales de pH requieren calibración periódica con
+  soluciones de calibración específicas (líquidos de referencia con
+  un pH conocido y estable, por ejemplo pH 4.0 y pH 7.0).
+- Sin una calibración adecuada y regular, el medidor puede dar
+  lecturas erróneas, generando decisiones de manejo incorrectas (por
+  ejemplo, corregir un pH que en realidad ya estaba bien, o no
+  corregir uno que sí estaba mal).
+- Frecuencia recomendada de calibración: variable según el modelo y
+  la frecuencia de uso, pero como referencia general, muchos
+  fabricantes recomiendan calibrar cada 2-4 semanas de uso regular.
+
+CÓMO USAR CORRECTAMENTE EL MEDIDOR DE pH
+1. Calibrar según las instrucciones del fabricante si corresponde
+   (ver punto anterior).
+2. Sumergir la punta/electrodo del medidor en la solución a medir
+   (agua de riego, solución con fertilizante, etc.).
+3. Esperar unos segundos hasta que la lectura se estabilice.
+4. Registrar el valor y ajustar (si es necesario) con "pH up" o "pH
+   down" según corresponda.
+5. Enjuagar la punta del medidor con agua limpia después de cada uso.
+
+CUIDADOS Y MANTENIMIENTO DEL ELECTRODO
+- El electrodo (la parte sensible que se sumerge en el líquido) es la
+  parte más delicada del instrumento: debe mantenerse siempre húmedo
+  (muchos medidores vienen con una tapa protectora con una pequeña
+  cantidad de solución de almacenamiento específica), ya que si se
+  seca por completo puede dañarse y perder precisión de forma
+  permanente.
+- Evitar golpes o caídas del instrumento.
+- Guardar el medidor en un lugar protegido, siguiendo las
+  indicaciones específicas del fabricante para el almacenamiento del
+  electrodo.
+
+CÓMO USAR EL MEDIDOR DE EC/PPM
+- El procedimiento es similar al del pH: sumergir la punta en la
+  solución, esperar a que la lectura se estabilice, y registrar el
+  valor.
+- A diferencia del pH, el medidor de EC/PPM generalmente no requiere
+  una calibración tan frecuente, aunque también conviene revisar las
+  indicaciones específicas del fabricante.
+
+SEÑALES DE QUE UN MEDIDOR PUEDE ESTAR DESCALIBRADO O DAÑADO
+- Lecturas que cambian de forma errática o poco consistente entre
+  mediciones de una misma solución.
+- Lecturas que claramente no coinciden con lo esperado (por ejemplo,
+  agua de red que da un pH extremadamente alto o bajo, fuera de todo
+  rango razonable).
+
+DATO PRÁCTICO
+Un medidor de pH sin calibración adecuada puede ser, paradójicamente,
+peor que no medir en absoluto, ya que genera una falsa sensación de
+control mientras en realidad se están tomando decisiones basadas en
+datos incorrectos. La calibración regular no es un paso opcional,
+sino parte integral del uso correcto de este instrumento.

@@ -1,0 +1,22 @@
+CULTIVO HIDROPÓNICO: NOCIONES GENERALES
+
+CONCEPTO
+En hidroponía las raíces reciben agua y nutrientes mediante una solución nutritiva y un medio que proporciona soporte y oxígeno.
+
+SISTEMAS
+Entre los sistemas habituales se encuentran DWC, recirculación, goteo, NFT y variantes de cultivo en medios inertes. Cada uno modifica la forma de entregar agua, nutrientes y oxígeno.
+
+OXÍGENO
+La oxigenación radicular es crítica. Un fallo de aireación o circulación puede afectar rápidamente las raíces.
+
+pH Y EC
+La solución nutritiva se controla principalmente mediante pH y concentración de sales, medida habitualmente como EC o convertida a PPM según la escala utilizada.
+
+TEMPERATURA
+La temperatura de la solución influye en oxigenación y salud radicular.
+
+ERROR FRECUENTE
+Cambiar nutrientes constantemente sin medir pH, EC, temperatura y comportamiento de las raíces.
+
+CONCEPTO CLAVE
+La hidroponía exige más control de variables porque las raíces dependen directamente de las condiciones de la solución.

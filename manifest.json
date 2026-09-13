@@ -1,0 +1,15 @@
+{
+  "name": "marIA - Asistente de Cultivo",
+  "short_name": "marIA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#112211",
+  "theme_color": "#2e7d32",
+  "icons": [
+    {
+      "src": "icons/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}

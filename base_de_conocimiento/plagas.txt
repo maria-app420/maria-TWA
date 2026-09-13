@@ -1,0 +1,313 @@
+
+INFORME COMPLETO DE PLAGAS EN EL CULTIVO DE CANNABIS
+
+Descripción, detección, prevención y control:
+
+A continuación se detallan las plagas más comunes, cómo
+reconocerlas de forma simple, cómo prevenirlas y cómo
+combatirlas.
+
+--------------------------------------------------------
+1. ARAÑA ROJA (Tetranychus urticae) - Ácaro
+--------------------------------------------------------
+DESCRIPCIÓN:
+Es una de las plagas más comunes y dañinas. Se trata de un
+ácaro diminuto (apenas visible a simple vista) que se alimenta
+succionando la savia de las hojas.
+
+CÓMO DETECTARLA:
+- Pequeños puntos amarillos o blancos en el haz de la hoja
+  (parecen "picaduras" de alfiler).
+- En el envés de la hoja, con una lupa, se ven puntos móviles
+  rojizos, amarillentos o verdosos.
+- En infestaciones avanzadas aparecen telarañas finas entre
+  hojas y tallos.
+- Truco práctico: pasar un papel blanco por debajo de la hoja
+  y golpearla suavemente; si hay araña roja, se verán puntitos
+  moviéndose sobre el papel.
+
+PREVENCIÓN:
+- Mantener humedad relativa moderada-alta (a la araña roja le
+  gusta el ambiente seco y caluroso).
+- Revisar las plantas nuevas antes de incorporarlas al cultivo.
+- Evitar el estrés hídrico y el exceso de nitrógeno.
+- Buena ventilación y distancia entre plantas.
+
+CÓMO COMBATIRLA:
+- Aumentar la humedad ambiente y bajar la temperatura si es
+  posible.
+- Aplicar aceite de neem o jabón potásico sobre hojas
+  (especialmente envés) cada 3-4 días.
+- Uso de ácaros depredadores (Phytoseiulus persimilis) como
+  control biológico.
+- En infestaciones severas, eliminar las hojas más afectadas.
+- Azufre vaporizado (nunca junto con aceites, y no en floración
+  avanzada por riesgo de residuos y olor).
+
+--------------------------------------------------------
+2. MOSCA BLANCA (Bemisia tabaci / Trialeurodes vaporariorum)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Pequeños insectos voladores blancos que se posan en el envés
+de las hojas y se alimentan de la savia, además de transmitir
+virus.
+
+CÓMO DETECTARLA:
+- Al mover o sacudir la planta, salen volando pequeñas moscas
+  blancas.
+- Envés de las hojas con puntos blancos (huevos y ninfas).
+- Presencia de "melaza" (sustancia pegajosa) sobre las hojas,
+  que luego puede generar hongo negro (fumagina).
+- Trampas cromáticas amarillas pegajosas cerca de las plantas
+  son el método más fácil de monitoreo.
+
+PREVENCIÓN:
+- Colocar trampas amarillas pegajosas de forma preventiva.
+- Revisar esquejes y plantas nuevas antes de ingresarlas.
+- Evitar exceso de nitrógeno (hojas muy tiernas las atraen).
+- Mallas antiinsectos en ventanas o entradas de aire (indoor).
+
+CÓMO COMBATIRLA:
+- Trampas cromáticas amarillas para capturar adultos.
+- Jabón potásico o aceite de neem aplicado en el envés.
+- Aspiradora manual para adultos en infestaciones leves
+  (método casero muy usado en cultivos pequeños).
+- Control biológico con Encarsia formosa (avispa parasitoide).
+- Repetir tratamientos cada 5-7 días porque los huevos no se
+  ven afectados por el primer tratamiento.
+
+--------------------------------------------------------
+3. PULGONES (Áfidos)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Insectos pequeños (verdes, negros o grisáceos) que se agrupan
+en brotes tiernos y envés de hojas, alimentándose de la savia.
+
+CÓMO DETECTARLA:
+- Grupos de insectos pequeños en brotes nuevos y tallos.
+- Hojas curvadas, deformadas o pegajosas (melaza).
+- Presencia de hormigas subiendo por la planta (las "cuidan"
+  para alimentarse de la melaza que producen).
+
+PREVENCIÓN:
+- Controlar hormigas cerca del cultivo.
+- Revisar brotes nuevos regularmente, sobre todo en primavera.
+- Evitar exceso de fertilización nitrogenada.
+
+CÓMO COMBATIRLA:
+- Chorro de agua a presión para desprenderlos mecánicamente.
+- Jabón potásico o aceite de neem pulverizado directo sobre
+  las colonias.
+- Insectos benéficos como mariquitas (Coccinellidae) o
+  crisopas, que son depredadores naturales.
+- En caso de infestación fuerte, poda de brotes muy afectados.
+
+--------------------------------------------------------
+4. TRIPS (Thysanoptera)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Insectos alargados y muy pequeños (1-2 mm), de color amarillo,
+marrón o negro, que raspan la superficie de la hoja para
+alimentarse de la savia.
+
+CÓMO DETECTARLA:
+- Manchas plateadas o bronceadas alargadas en las hojas.
+- Pequeños puntos negros (excrementos) sobre esas manchas.
+- Al golpear una hoja sobre papel blanco, se ven insectos
+  diminutos y alargados moviéndose rápido.
+- Trampas azules pegajosas son más efectivas que las amarillas
+  para este insecto en particular.
+
+PREVENCIÓN:
+- Trampas azules pegajosas como monitoreo preventivo.
+- Evitar malezas alrededor del cultivo (hospedan trips).
+- Cuarentena de plantas nuevas.
+- Buena limpieza del área de cultivo.
+
+CÓMO COMBATIRLA:
+- Aceite de neem o jabón potásico en aplicaciones repetidas.
+- Ácaros depredadores como Amblyseius o Orius (control
+  biológico).
+- Eliminar hojas con daño severo.
+- Mantener buena humedad, ya que el ambiente seco favorece su
+  reproducción.
+
+--------------------------------------------------------
+5. COCHINILLAS (Cochinilla algodonosa y de escudo)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Insectos que se fijan en tallos, nudos y envés de hojas,
+cubiertos por una capa cerosa blanca (algodonosa) o un
+caparazón (de escudo).
+
+CÓMO DETECTARLA:
+- Masas blancas algodonosas en uniones de tallos y hojas.
+- Pequeños "escudos" marrones o grisáceos pegados al tallo.
+- Presencia de melaza y posible hongo negro asociado.
+
+PREVENCIÓN:
+- Inspeccionar bien esquejes y plantas madre antes de
+  incorporarlas.
+- Buena ventilación, ya que prefieren ambientes poco aireados.
+
+CÓMO COMBATIRLA:
+- Retirar manualmente con un hisopo embebido en alcohol
+  isopropílico (para infestaciones puntuales).
+- Aceite de neem aplicado directamente sobre las colonias.
+- Jabón potásico en pulverizaciones repetidas cada 5-7 días.
+- Control biológico con Cryptolaemus montrouzieri (mariquita
+  depredadora de cochinillas).
+
+--------------------------------------------------------
+6. MINADOR DE HOJAS (Liriomyza spp.)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Larvas de una mosca pequeña que se alimentan dentro del tejido
+de la hoja, generando galerías o "túneles" visibles.
+
+CÓMO DETECTARLA:
+- Líneas o galerías blanquecinas serpenteantes dentro de la
+  hoja (muy características y fáciles de reconocer a simple
+  vista).
+- Pequeños puntos donde la mosca adulta pica la hoja para
+  poner huevos.
+
+PREVENCIÓN:
+- Trampas amarillas pegajosas para adultos.
+- Revisar hojas bajas regularmente.
+- Eliminar malezas cercanas.
+
+CÓMO COMBATIRLA:
+- Retirar y eliminar las hojas con galerías activas (con la
+  larva adentro) antes de que emerja el adulto.
+- Aceite de neem para reducir la puesta de huevos.
+- Control biológico con avispas parasitoides (Diglyphus
+  isaea).
+
+--------------------------------------------------------
+7. ORUGAS Y GUSANOS (Spodoptera, Heliothis, etc.)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Larvas de mariposas nocturnas que se alimentan de hojas y,
+en casos más problemáticos, perforan directamente los
+cogollos (colas) en floración.
+
+CÓMO DETECTARLA:
+- Agujeros grandes e irregulares en las hojas.
+- Excrementos pequeños (bolitas oscuras) sobre hojas o dentro
+  de los cogollos: es la señal más clara de que hay una oruga
+  alojada en la flor.
+- Al abrir un cogollo sospechoso, puede encontrarse la larva
+  directamente.
+
+PREVENCIÓN:
+- Mallas antiinsectos en cultivos indoor o invernadero.
+- Revisión visual frecuente de cogollos en floración, sobre
+  todo en outdoor durante el vuelo de mariposas nocturnas.
+- Trampas de feromonas específicas para polillas.
+
+CÓMO COMBATIRLA:
+- Retiro manual de orugas (revisar de noche con linterna, que
+  es cuando están más activas).
+- Bacillus thuringiensis (Bt), un bioinsecticida biológico muy
+  usado y seguro, efectivo contra larvas de lepidópteros.
+- Eliminar cogollos muy dañados para evitar pudrición
+  secundaria.
+
+--------------------------------------------------------
+8. CARACOLES Y BABOSAS
+--------------------------------------------------------
+DESCRIPCIÓN:
+Moluscos que se alimentan de hojas y brotes tiernos,
+principalmente en cultivos outdoor o con alta humedad.
+
+CÓMO DETECTARLA:
+- Agujeros grandes e irregulares en hojas bajas.
+- Rastro de baba brillante sobre hojas, macetas o el suelo,
+  fácil de ver por la mañana temprano.
+- Mayor actividad durante la noche o en días húmedos.
+
+PREVENCIÓN:
+- Evitar exceso de humedad y materia orgánica en superficie.
+- Elevar las macetas del suelo directo.
+- Mantener el área libre de restos vegetales en descomposición.
+
+CÓMO COMBATIRLA:
+- Recolección manual nocturna.
+- Barreras físicas: ceniza, cáscara de huevo molida o cobre
+  alrededor de la planta.
+- Trampas con cerveza (atrae y ahoga a los caracoles/babosas).
+- Cebos específicos a base de fosfato férrico (más seguros que
+  los tradicionales a base de metaldehído).
+
+--------------------------------------------------------
+9. NEMATODOS (plaga de raíz)
+--------------------------------------------------------
+DESCRIPCIÓN:
+Gusanos microscópicos del suelo que atacan las raíces,
+formando nódulos y debilitando la absorción de agua y
+nutrientes.
+
+CÓMO DETECTARLA:
+- Planta débil, con crecimiento lento y hojas amarillentas sin
+  causa aparente.
+- Al revisar las raíces (al trasplantar, por ejemplo), se
+  observan pequeños nódulos o agallas.
+
+PREVENCIÓN:
+- Usar sustrato de calidad y, si es posible, esterilizado.
+- Rotar o renovar la tierra entre cultivos.
+- Buen drenaje para evitar condiciones que favorezcan su
+  desarrollo.
+
+CÓMO COMBATIRLA:
+- Nematodos benéficos (Steinernema spp.) que actúan como
+  control biológico.
+- Extractos de neem aplicados al riego.
+- En infestaciones severas, es preferible reemplazar el
+  sustrato afectado.
+
+--------------------------------------------------------
+BUENAS PRÁCTICAS GENERALES DE PREVENCIÓN
+--------------------------------------------------------
+1. Cuarentena: toda planta o esqueje nuevo debe aislarse unos
+   días antes de sumarlo al cultivo general.
+2. Inspección visual regular: revisar hojas (haz y envés),
+   tallos y nudos al menos 2-3 veces por semana, idealmente con
+   una lupa de mano (60x es suficiente y económica).
+3. Trampas cromáticas: amarillas (mosca blanca, minador) y
+   azules (trips) colocadas de forma preventiva, no solo cuando
+   ya hay problema.
+4. Ambiente controlado: mantener humedad y temperatura dentro
+   de rangos adecuados según la etapa del cultivo, evitando
+   extremos que favorecen a distintas plagas.
+5. Higiene: eliminar restos vegetales, malezas y hojas muertas
+   del área de cultivo.
+6. Ventilación: buena circulación de aire entre plantas,
+   evitando el follaje muy denso.
+7. Nutrición equilibrada: una planta bien nutrida (sin excesos
+   ni carencias) es más resistente a plagas.
+8. Registro: llevar un cuaderno o planilla simple de
+   observaciones, para detectar patrones y actuar más rápido
+   en el próximo ciclo.
+
+--------------------------------------------------------
+CONSIDERACIONES FINALES SOBRE EL CONTROL
+--------------------------------------------------------
+- Siempre que sea posible, priorizar el control biológico
+  (insectos benéficos) y productos de bajo impacto (jabón
+  potásico, aceite de neem, Bacillus thuringiensis) antes que
+  productos químicos de síntesis.
+- Rotar tratamientos y no depender de un único producto, para
+  evitar que la plaga genere resistencia.
+- Suspender cualquier tratamiento foliar con suficiente
+  antelación antes de la cosecha, respetando los tiempos de
+  carencia del producto utilizado.
+- Ante una duda de identificación, lo más práctico es tomar una
+  foto con buena luz y máximo detalle (incluyendo el envés de
+  la hoja) para comparar con guías o consultar con un
+  especialista en sanidad vegetal.
+
+========================================================
+FIN DEL INFORME
+========================================================

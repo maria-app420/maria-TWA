@@ -1,0 +1,178 @@
+=== TEMA: USOS MÉDICOS Y EFICACIA CLÍNICA GENERAL ===
+
+El cannabis medicinal se utiliza de manera terapéutica cuando los medicamentos tradicionales no ofrecen un alivio suficiente o provocan efectos secundarios demasiado graves [172]. Aunque las investigaciones científicas indican que el cannabis no cura de forma directa las enfermedades o trastornos, posee una gran capacidad comprobada para aliviar los síntomas o ralentizar el avance de determinadas afecciones [172]. 
+
+A partir de datos obtenidos en ensayos clínicos aleatorizados, doble ciego y controlados, se ha demostrado de manera sólida la eficacia de los cannabinoides en el tratamiento de las siguientes condiciones médicas principales [172, 173]:
+* Dolor crónico (especialmente neuropático) [174]
+* Esclerosis múltiple [178]
+* Náuseas, vómitos y pérdida de apetito (inducidos por tratamientos oncológicos o enfermedades sistémicas) [180]
+* Síndrome de Gilles de la Tourette [182]
+* Glaucoma resistente a terapias estándar [183]
+
+=== TEMA: INDICACIONES TERAPÉUTICAS ESPECÍFICAS ===
+
+DOLOR CRÓNICO Y NEUROPÁTICO
+El alivio del dolor crónico severo representa la razón principal de consulta e indicación para el uso de cannabis medicinal [174]. El cannabis actúa de manera diferenciada según el tipo de dolor:
+* Dolor Neuropático: Es el dolor causado por lesiones o enfermedades que dañan los nervios sensoriales (como en el caso de la esclerosis múltiple o la neuralgia facial) [174]. Los cannabinoides muestran su mayor efectividad en este tipo de dolor, así como en pacientes con fibromialgia, reduciendo la hipersensibilidad al tacto [174].
+* Dolor Agudo: Los estudios clínicos no han demostrado beneficios significativos del cannabis para tratar el dolor agudo (como el dolor posoperatorio inmediato) debido al diferente papel fisiológico de los endocannabinoides en estos procesos [175].
+* Sinergia y Uso de Opiáceos: Los cannabinoides actúan de forma sinérgica con analgésicos opiáceos fuertes como la morfina [177]. Esta combinación dual permite reducir considerablemente las dosis de opioides necesarias en el régimen diario del paciente, disminuyendo a su vez la tolerancia y los efectos adversos graves de estos (náuseas, vómitos, sedación profunda y depresión respiratoria) [177].
+
+ESCLEROSIS MÚLTIPLE
+La esclerosis múltiple (EM) es una de las afecciones más estudiadas a largo plazo respecto al tratamiento con cannabinoides, principalmente bajo el producto farmacéutico Sativex® [178].
+* Efectos Clínicos: Se ha demostrado científicamente que el uso de cannabinoides alivia de forma significativa el dolor neuropático, los espasmos musculares severos, los calambres, los temblores y la espasticidad, mejorando además la incontinencia urinaria (síntomas de la vejiga) [179].
+* Calidad del Sueño: Los pacientes experimentan un sueño significativamente más profundo y de mayor duración [179].
+* Ausencia de Tolerancia: Los ensayos clínicos de larga duración demuestran que los pacientes no desarrollan tolerancia a los efectos terapéuticos del cannabis ni requieren un aumento progresivo de las dosis para sostener la misma eficacia médica [178].
+
+NÁUSEAS, VÓMITOS Y ESTIMULACIÓN DEL APETITO
+El cannabis medicinal ofrece una potente acción antiemética y estimulante del apetito, de gran relevancia para pacientes sometidos a quimioterapia o radioterapia por cáncer, o que sufren el síndrome de emaciación (pérdida severa de peso) debido a hepatitis C, VIH y SIDA [180].
+* Aprobación Farmacéutica: Desde 1986, la FDA ha aprobado el THC sintético (Marinol®) como estimulante del apetito en la anorexia por VIH/SIDA y como antiemético para la quimioterapia oncológica [180]. 
+* Dinámica Nutricional: Estimula de forma selectiva un fuerte deseo de consumir alimentos ricos en calorías, grasas o azúcares, lo cual es crucial para evitar la caquexia y el debilitamiento sistémico [181].
+* Ventaja Multimodal: Al actuar simultáneamente sobre el dolor, las náuseas y la falta de apetito, el cannabis representa una opción terapéutica única para la calidad de vida. Para pacientes que toleran mal la vía digestiva, la administración por inhalación evita la vía oral y actúa de forma instantánea [181].
+
+SÍNDROME DE GILLES DE LA TOURETTE
+Este trastorno neuropsiquiátrico está caracterizado por tics físicos (motores) y vocales (fónicos) incontrolables [182].
+* Evidencia Científica: Los ensayos clínicos realizados con THC puro demostraron una reducción estadísticamente significativa en la frecuencia y severidad de los tics, sin provocar efectos secundarios de gravedad [182]. Asimismo, existen reportes anecdóticos de mejoría en trastornos asociados como el trastorno obsesivo-compulsivo (TOC) [182].
+
+GLAUCOMA RESISTENTE A TERAPIAS
+En pacientes con glaucoma, la presión interna elevada del ojo provoca un daño progresivo en el nervio óptico y ceguera irreversible [183].
+* Efectos y Limitaciones: El cannabis inhalado o ingerido disminuye la presión intraocular de forma equivalente a los medicamentos estándar [183]. No obstante, debido a que el efecto tiene una duración limitada de pocas horas, el uso medicinal en esta patología requiere una dosificación frecuente y regular para sostener los niveles óptimos de presión [183].
+
+=== TEMA: CANNABIS EN OTRAS ENFERMEDADES Y TRASTORNOS ===
+
+Además de las indicaciones principales, la investigación clínica y el uso tradicional exploran los cannabinoides para modular los síntomas de otros trastornos complejos:
+
+* Ansiedad: La relación es bidireccional y depende estrictamente del quimiotipo. El THC administrado en dosis elevadas puede incrementar la ansiedad o provocar paranoia [184]. En contraparte, el CBD (cannabidiol) posee una acción ansiolítica comprobada en agudo, y su coadministración junto al THC disminuye de forma marcada la ansiedad inducida por este último [184]. No obstante, se requiere más investigación a largo plazo para evaluar la persistencia de estos efectos [184].
+* Cáncer (Acción Paliativa y de Laboratorio): Mientras que clínicamente los cannabinoides cumplen un rol paliativo excelente (reduciendo el dolor, náuseas, insomnio y caquexia) [185], en estudios preclínicos de laboratorio (células aisladas y modelos animales) se ha observado que los cannabinoides pueden inhibir el desarrollo y migración de células cancerosas bajo condiciones específicas [185]. No existen aún evidencias sólidas en ensayos de fase clínica en humanos que certifiquen una cura contra el cáncer [185].
+* Epilepsia y Convulsiones: El CBD (cannabidiol) posee potentes propiedades anticonvulsivas independientes del THC, demostradas en modelos animales desde 1979 [187]. Los estudios en seres humanos muestran que reduce drásticamente la frecuencia y gravedad de las convulsiones en epilepsias complejas y refractarias a la medicación (como los síndromes infantiles graves), ofreciendo una excelente alternativa sin generar efectos psicoactivos [187].
+* Enfermedades Inflamatorias Intestinales (EII): En el intestino, el sistema endocannabinoide ejerce un papel regulador (homeostático) que afecta la motilidad y provee un efecto antidiarreico [188]. En pacientes con Crohn o Colitis Ulcerosa, el consumo por vía respiratoria (fumado) reduce sintomáticamente la actividad de la enfermedad, mejora el apetito y disminuye el uso de otros fármacos, aunque no se ha comprobado un efecto antiinflamatorio histológico claro; la administración de CBD oral ha mostrado menor potencia sintomática [188].
+* Enfermedad de Parkinson (EP): En animales, los cannabinoides muestran efectos neuroprotectores y regulan los trastornos motores de la levodopa [189]. En estudios con humanos, los cannabinoides por vía oral muestran resultados inconsistentes, pero el uso por vía respiratoria (fumado) reduce significativamente los temblores, la rigidez, el dolor y mejora el sueño [189]. El CBD, por su parte, reporta un aumento directo en la calidad de vida general de los pacientes [189].
+* Insomnio y Trastornos del Sueño: Tanto el THC como el CBD modulan las fases del sueño, facilitando la conciliación rápida y logrando un descanso más prolongado según reportes clínicos consistentes de los pacientes [190].
+* Reumatismo: Los datos son limitados, pero demuestran que el uso de cannabis alivia el dolor inflamatorio de las articulaciones y mejora el sueño en pacientes con patologías reumáticas [191].
+* Trastornos Psiquiátricos y Esquizofrenia: El consumo prolongado de THC a altas dosis es un factor de riesgo para trastornos mentales, pero el CBD no psicoactivo posee propiedades antipsicóticas sustanciales [192]. En esquizofrenia aguda, estudios con CBD puro demostraron una eficacia de reducción de síntomas comparable a la de fármacos antipsicóticos estándar, sin inducir sus efectos secundarios metabólicos o neurológicos [192].
+
+=== TEMA: CALIDAD FARMACÉUTICA Y DIRECTRICES DE SEGURIDAD ===
+
+La utilización del cannabis con fines terapéuticos exige que el producto cumpla de manera rigurosa con directrices farmacéuticas y estándares de estandarización [196].
+
+* El Cannabis de Farmacia: Debe ser cultivado y procesado de acuerdo con las Prácticas Correctas de Fabricación (GMP) [196, 208]. Esto asegura una composición constante y predecible de principios activos (quimiotipo estandarizado de THC, CBD y terpenos) lote tras lote [196], además de garantizar mediante laboratorios externos independientes que el material vegetal se encuentra 100% libre de contaminantes nocivos como metales pesados, pesticidas, bacterias, mohos, solventes o toxinas [196, 203, 223].
+* Riesgos del Cannabis Ilegal o de Cafetería: En el mercado ilegal o de autocultivo sin control, se desconoce la composición exacta y los ratios de cannabinoides del producto, lo que imposibilita predecir sus efectos terapéuticos y dosificaciones [196, 203]. Además, la falta de análisis microbiológicos o de pesticidas somete al paciente a un grave riesgo sanitario de infecciones fúngicas o intoxicaciones por químicos residuales [196, 203, 223].
+
+=== TEMA: FITOCANNABINOIDES Y TERPENOS EN EL CANNABIS ===
+
+La acción terapéutica del cannabis está determinada principalmente por sus compuestos químicos activos únicos, clasificados como fitocannabinoides [197], y sus aceites aromáticos volátiles, conocidos como terpenos [199].
+
+FITOCANNABINOIDES PRINCIPALES
+* Delta-9-tetrahidrocannabinol (THC): Es el cannabinoide más conocido y el principal compuesto psicoactivo del cannabis [193, 198]. Actúa directamente en el alivio del dolor crónico, reduce la espasticidad muscular, controla náuseas y vómitos, y mejora el apetito y la conciliación del sueño [198].
+* Cannabidiol (CBD): Compuesto medicinal no psicoactivo (no produce intoxicación o "high") que posee una gran relevancia científica [198]. El CBD ejerce acciones ansiolíticas, antiepilépticas y antipsicóticas [184, 187, 192]. 
+* Modulación del CBD sobre el THC (Efecto Antagonista): El CBD modula la acción del THC en el organismo [198]. Su administración conjunta reduce la intensidad de los efectos adversos asociados al THC, tales como la euforia excesiva (el colocón), el deterioro de la memoria a corto plazo y la ansiedad aguda [198].
+
+LOS TERPENOS Y EL EFECTO SÉQUITO
+Los terpenos son compuestos orgánicos responsables del sabor, olor y aroma característicos de cada cepa de cannabis (existen más de 120 identificados en la planta) [199, 200]. 
+* Sinergia Farmacológica: Los terpenos interactúan directamente con los fitocannabinoides para modificar, potenciar o modelar sus efectos médicos en el cuerpo (mecanismo conocido como "efecto séquito") [199]. 
+* Propiedades Independientes: Los terpenos poseen acciones farmacológicas propias [199]. Por ejemplo, el mirceno actúa como un agente antiinflamatorio y neuroprotector, mientras que el beta-cariofileno destaca como un potente analgésico natural [199].
+
+=== TEMA: ACEITE DE CANNABIS Y PREPARACIONES MAGISTRALES ===
+
+Los aceites o extractos concentrados de cannabis se producen separando y disolviendo los principios activos (cannabinoides y terpenos) de las flores secas utilizando un disolvente orgánico (como alcohol de cereal o CO₂ supercrítico) [201, 213].
+
+* Administración Sublingual y Oral: Son muy populares debido a la facilidad de dosificación y comodidad en comparación con la vía pulmonar [201]. Son especialmente indicados para la práctica de la medicina convencional [201].
+* Formulaciones Magistrales de Farmacia: Las farmacias especializadas e instituciones autorizadas procesan la flor estandarizada (siguiendo directrices GMP) para elaborar aceites dosificados con excipientes específicos [202, 213]. El aceite de triglicéridos de cadena media (MCT) ha demostrado científicamente poseer una estabilidad de cannabinoides muy superior a lo largo del tiempo en comparación con el aceite de oliva (OOPh) en fórmulas magistrales [255].
+* Peligros de la Elaboración Casera: No se recomienda la autopreparación casera debido a la imposibilidad de certificar la uniformidad de las dosis entre lotes, el riesgo de dejar trazas de disolventes químicos nocivos en el concentrado y la falta de filtración de contaminantes biológicos o metales pesados [203].
+* Aceite de CBD comercial: Es un mercado masivo derivado de cepas de cáñamo industrial con alto CBD y trazas insignificantes de THC [204].
+
+=== TEMA: VÍAS DE ADMINISTRACIÓN Y BIODISPONIBILIDAD ===
+
+La vía de administración elegida determina la velocidad de aparición del efecto, la intensidad del mismo y la duración total de la ventana terapéutica [205].
+
+INHALACIÓN (VÍA PULMONAR)
+* Procedimiento: Consiste en la vaporización de las flores secas o concentrados líquidos sin llegar a la combustión [207]. 
+* Dispositivos Médicos Registrados: Para garantizar una administración uniforme, segura y controlada (libre de las toxinas de fumar tabaco o papel), se deben utilizar dispositivos sanitarios certificados:
+  1. Volcano Medic: Vaporizador de mesa para flores secas o líquidos disueltos [208].
+  2. Mighty Medic: Vaporizador portátil para flores secas [208].
+  3. SyqeAir: Inhalador clínico que entrega microdosis medidas y uniformes de aerosol de espectro completo (reduce al mínimo la variación entre pacientes) [208, 250].
+* Parámetros Clínicos:
+  * Inicio del efecto: Extremadamente rápido (5 a 10 minutos) debido al paso inmediato de los alvéolos al torrente sanguíneo [207].
+  * Duración del efecto: De 1 a 3 horas [207, 211].
+  * Adecuación: Ideal para crisis agudas, dolor severo inmediato y náuseas intensas [181, 211].
+
+MUCOSA BUCAL / SUB LINGUAL
+* Procedimiento: Gotas de aceite o aerosoles aplicados bajo la lengua o en la membrana interna de la mejilla [209].
+* Parámetros Clínicos:
+  * Inicio del efecto: De 30 a 90 minutos [209].
+  * Duración del efecto: De 6 a 8 horas [209].
+  * Adecuación: Permite un inicio más veloz y controlado que la vía oral al absorber parte de los compuestos directamente a través de las membranas bucales, evitando parcialmente la primera metabolización del hígado [209].
+
+ADMINISTRACIÓN ORAL (INGESTA)
+* Procedimiento: Cápsulas, comprimidos, aceites ingeridos o comestibles tradicionales [210].
+* Farmacocinética y Metabolización Hepática: Al ingerirse, el THC y el CBD pasan por todo el tracto digestivo hasta llegar al hígado, donde sufren una primera y profunda metabolización [210]. El hígado transforma el THC en 11-hidroxi-THC, un metabolito con una potencia psicoactiva sustancialmente mayor y una duración de acción muy extendida en el cuerpo [42].
+* Parámetros Clínicos:
+  * Biodisponibilidad: Extremadamente baja (máximo un 6% del total consumido se absorbe de forma activa) [210].
+  * Inicio del efecto: Muy lento (60 a 180 minutos) debido al tránsito digestivo [210, 211].
+  * Duración del efecto: Muy prolongada (6 a 12 horas) [210, 211].
+  * Adecuación: Indicado para el tratamiento de dolores crónicos persistentes, espasticidad constante y para sostener un sueño ininterrumpido durante toda la noche [179, 211].
+
+=== TEMA: PAUTAS DE DOSIFICACIÓN Y PREVENCIÓN DE SOBREDOSIS ===
+
+La respuesta al cannabis medicinal es altamente individualizada y varía según la tolerancia, peso, receptores genéticos e historial de consumo del paciente [214]. Para maximizar los beneficios terapéuticos y minimizar la incidencia de efectos secundarios, se debe aplicar un protocolo de dosificación basado en las siguientes pautas:
+
+* La Regla de Oro (Titulación Lenta): "Start low, go slow" (Comenzar con una dosis muy baja y realizar incrementos lentos y progresivos) [43, 214, 224].
+* Dosificación Fraccionada: Es mucho más seguro y eficaz administrar múltiples microdosis pequeñas distribuidas a lo largo del día que tomar una dosis grande acumulada de una sola vez [215, 224].
+* Paciencia entre Dosis: Especialmente por vía oral, el paciente debe esperar al menos dos horas completas antes de evaluar la necesidad de una dosis complementaria [43]. Es fundamental sostener la misma dosis inicial baja durante varios días para monitorear el progreso antes de plantear un aumento de la dosificación [215, 225].
+* Ventana Personalizada de Tratamiento: A lo largo de una o dos semanas de seguimiento riguroso, el paciente podrá identificar su dosis terapéutica óptima, que provee el alivio sintomático deseado con nulos o mínimos efectos secundarios [216].
+
+=== TEMA: EL EFECTO DE EUFORIA Y GESTIÓN DE LA INTOXICACIÓN ===
+
+El componente psicoactivo del cannabis, el THC, es el responsable de inducir la intoxicación o el denominado "efecto de euforia" (high) [193]. 
+
+* Sintomatología Común de la Euforia: En dosis terapéuticas controladas, se describe como una sensación leve de bienestar, alegría, relajación mental y energía [194, 216]. Sin embargo, dosis excesivas o falta de tolerancia pueden provocar una distorsión leve de la realidad, fallos transitorios en la memoria de corto plazo, risa incontrolada, taquicardia y cambios agudos en la percepción visual o auditiva [194, 216].
+* Peligro de la Sobredosis Oral: El consumo por vía digestiva (comestibles, cápsulas) presenta el mayor riesgo de sobredosis e intoxicación severa [193, 218]. Esto se debe a que la metabolización del hígado libera 11-hidroxi-THC (mucho más potente y duradero que el THC inhalado) [42], sumado al retraso en el inicio del efecto, lo que induce al error común de reingerir dosis antes de tiempo [43].
+* Eficacia del Té de Cannabis: Se ha comprobado que al administrar el cannabis en forma de infusión o té, los efectos secundarios de la euforia y la sobredosis se producen con una frecuencia notablemente menor, siendo una vía de asimilación más gradual y suave para el organismo [194, 218].
+* Protocolo de Contención ante una Crisis de Ansiedad: Si un paciente experimenta un "efecto de euforia" excesivo o un ataque de pánico por sobredosis, el cuadro remitirá espontáneamente en pocas horas a medida que los niveles de THC en sangre disminuyan [233]. El protocolo de manejo inmediato consiste en [194, 217]:
+  1. Trasladar al paciente a un espacio físico tranquilo, seguro, con luz tenue y cómodo [194, 217].
+  2. Asegurar el acompañamiento de una persona de confianza con quien pueda conversar con calma para disminuir la agitación mental [194, 217].
+  3. Evitar la ingesta de más sustancias y, en caso de susceptibilidad psiquiátrica previa, se aconseja el uso de variedades ricas en CBD puro (como Bediol) para contrarrestar y bloquear la actividad psicoactiva del THC en el cerebro [194, 218, 242].
+
+=== TEMA: EFECTOS SECUNDARIOS, ADVERTENCIAS Y RIESGOS ===
+
+Aunque el cannabis medicinal posee una excelente ventana de seguridad y carece de toxicidad letal comprobada en dosis altas [219, 232], su administración conlleva efectos secundarios transitorios y riesgos específicos que exigen monitoreo médico profesional [219, 226].
+
+EFECTOS SECUNDARIOS AGUDOS (DOSIS ELEVADAS)
+Aparecen rápidamente tras el consumo de dosis que exceden la tolerancia y se resuelven espontáneamente en pocas horas [221]:
+* Sequedad bucal (boca seca) y enrojecimiento ocular [221, 233]
+* Aumento notable del apetito [221]
+* Disminución transitoria de la alerta, reflejos y coordinación psicomotora [221, 248]
+* Incremento de la frecuencia cardíaca (taquicardia) [221, 233]
+* Hipotensión ortostática (bajadas de tensión arterial al ponerse de pie) y mareos [221, 233]
+
+RIESGOS CLÍNICOS Y ADVERTENCIAS PARTICULARES
+* Psicosis y Vulnerabilidad Psiquiátrica: El cannabis con alto THC puede inducir episodios psicóticos agudos transitorios (con delirios y alucinaciones) en personas no predispuestas si se consume en dosis masivas [227, 234]. No obstante, representa un riesgo crítico de gatillar brotes psicóticos permanentes o agravar de forma severa enfermedades psiquiátricas crónicas en individuos con predisposición genética hereditaria (antecedentes familiares de esquizofrenia o trastorno bipolar) [226, 227]. Estos pacientes deben evitar el consumo de THC o realizarlo bajo estricto control psiquiátrico [226, 227].
+* Cardiopatías: Debido al fuerte impacto temporal del THC en la frecuencia cardíaca y la presión arterial, los pacientes con antecedentes de infarto, insuficiencia coronaria o arritmias deben evitar el uso de cannabis o hacerlo exclusivamente bajo control de su cardiólogo [226, 229].
+* Embarazo y Lactancia: Los cannabinoides (especialmente el THC) atraviesan la barrera placentaria afectando directamente el desarrollo neurológico del feto, y se excretan en altas concentraciones a través de la leche materna [229]. Se prohíbe terminantemente su consumo en estas etapas [229].
+* Insuficiencia y Enfermedad Hepática: Dado que el hígado es el órgano encargado de procesar y metabolizar los cannabinoides [230], cualquier daño o insuficiencia hepática altera significativamente la velocidad de eliminación y los efectos de la sustancia [230]. Estos pacientes requieren un control de titulación sumamente lento para no exceder la capacidad metabólica de su hígado [230].
+* Adicción y Abstinencia: El riesgo de desarrollar adicción o dependencia al cannabis en un contexto de uso medicinal controlado es mínimo en comparación con el uso recreativo libre [231]. Sin embargo, la interrupción abrupta de dosis elevadas aplicadas a largo plazo puede desencadenar un síndrome de abstinencia leve caracterizado por inquietud, irritabilidad, insomnio de conciliación, pesadillas o sueños vívidos y pérdida temporal del apetito [231].
+
+=== TEMA: REGISTRO HISTÓRICO DE INVESTIGACIONES CLÍNICAS ===
+
+A continuación, se detalla una recopilación cronológica de investigaciones, ensayos clínicos y estudios de química analítica realizados a nivel mundial (período 2004 - 2022) utilizando productos estandarizados de cannabis (como Bedrocan):
+
+* 2022 | Impacto del CBD en el THC | Englund et al. | No se demostró clínicamente que la adición de CBD reduzca de forma significativa las reacciones adversas del THC sobre las funciones cognitivas o psiquiátricas, ni altera el efecto subjetivo placentero de este [235].
+* 2022 | Dolor Crónico y Opioides | Nunnari et al. | Se observó una reducción masiva en el uso diario de opiáceos en pacientes bajo tratamiento a largo plazo con extractos de cannabis. Este beneficio reductor no se constató en medicamentos anticonvulsivantes o antidepresivos [235].
+* 2022 | Inhalador Clínico SyqeAir | Aviram et al. | El tratamiento con el inhalador de microdosis Syqe demostró una reducción drástica del dolor crónico y una mejora notable de la calidad de vida, reportando un perfil de efectos adversos muy superior al de los vaporizadores tradicionales [236].
+* 2022 | Conectomas Cerebrales | Ramaekers et al. | Las redes cerebrales funcionales permiten diagnosticar y diferenciar con precisión a los consumidores ocasionales de los crónicos ante un estado de intoxicación aguda por THC [236].
+* 2022 | Diferencias de Género | Arkell et al. | No se encontraron diferencias sistemáticas significativas entre hombres y mujeres ante los efectos inmediatos de dosis moderadas de cannabis vaporizado [237].
+* 2021 | Epilepsia Refractaria Infantil | Zafar et al. | El tratamiento con extractos de cannabis de planta entera redujo en un 86% la frecuencia mensual de ataques de epilepsias graves iniciadas en la infancia, sin presencia de acontecimientos adversos de gravedad [237].
+* 2021 | Jaqueca Crónica | Baraldi et al. | Los extractos de cannabinoides reducen la intensidad del dolor en pacientes con migraña crónica, aunque el alcance curativo total reporta límites [238].
+* 2021 | Fibromialgia | Mazza | El cannabis representa una excelente alternativa terapéutica para pacientes con fibromialgia refractaria al tratamiento estándar, con incidencia de efectos adversos de carácter exclusivamente leve [238].
+* 2020 | Capacidad de Conducción | Arkell et al. | El desvío de carril y los virajes bruscos aumentaron de forma marcada entre los 40 y 100 minutos tras inhalar Bedrocan (alto THC) y Bediol (THC/CBD), regresando a la normalidad absoluta entre los 240 y 300 minutos; el quimiotipo Bedrolite (CBD puro) no mostró alteraciones respecto al placebo [238].
+* 2020 | Inhalador Syqe | Almog et al. / Vulfons et al. | Demostró entregar dosis bajas y sumamente precisas de THC que proveen un alivio analgésico controlado y alta satisfacción clínica intrahospitalaria en dolor neuropático [239].
+* 2020 | Recuerdos Falsos | Kloft et al. | La intoxicación aguda de THC incrementa sistemáticamente la susceptibilidad a la formación de falsas memorias, un factor clave para la validez de declaraciones ante la policía o el ámbito judicial [241].
+* 2020 | Estabilidad de Aceites | Ramella et al. | La estabilidad de los cannabinoides en formulaciones magistrales de farmacia es significativamente superior si se utiliza aceite de triglicéridos de cadena media (MCT) en lugar de aceite de oliva [255].
+* 2019 | Fibromialgia y Sinergias | Van de Donk et al. | Variedades con alto THC incrementaron notablemente el umbral de dolor ante la presión. La inhalación conjunta de CBD elevó las concentraciones plasmáticas de THC (sinergia farmacocinética) pero antagonizó su efecto analgésico directo (antagonismo farmacodinámico) [241].
+* 2019 | Conducción Segura | Tank et al. | Los errores de conducción graves se cometen de forma inmediata tras el consumo. Pasadas tres horas desde la inhalación, no se registra un aumento de riesgo vial [243].
+* 2018 | Datos de Prescripción | De Hoop et al. | El análisis de datos de la Fundación Holandesa de Estadísticas Farmacéuticas reveló un incremento constante de pacientes bajo receta, pero con un consumo promedio diario plano e invariable durante años, demostrando la ausencia de abuso o desarrollo de tolerancia clínica [244].
+* 2017 | Gilles de la Tourette | Jakubovski et al. | El uso de cannabis medicinal reportó alta eficacia en pacientes con tics vocales y motores severos resistentes a tratamientos tradicionales [245].
+* 2016 | Alternativa al Sativex | Sacca et al. | Pacientes con esclerosis múltiple que no respondían al fármaco Nabiximol (Sativex) mostraron una excelente tasa de respuesta al ser tratados con flores de Bedrocan, tolerándose de forma óptima sin inducir efectos psicoactivos severos [246].
+* 2016 | Ensayos de Vaporización | Hazekamp | Se comprobó mediante análisis químicos que la irradiación gamma es un método seguro y eficaz para eliminar hongos y bacterias en el cannabis medicinal, sin alterar de forma cualitativa su perfil de terpenos original [257].
+* 2009 | Temperatura de Vaporización | Pomahacova et al. | Se demostró que la vaporización controlada a una temperatura óptima de 230 °C evita la formación de subproductos y toxinas dañinas asociadas a la combustión tradicional del cigarrillo [260].
+* 2007 | Preparación de Té | Hazekamp et al. | Los cambios y variaciones menores en el protocolo de preparación estándar de la infusión de cannabis no producen alteraciones drásticas en el contenido o dosificación final de cannabinoides disueltos [261].
+* 2004 | Cuantificación por Resonancia | Hazekamp et al. | Desarrollo y validación del método cuantitativo mediante Resonancia Magnética Nuclear de Protón (1H-NMR), permitiendo una cuantificación rápida y exacta de los cannabinoides presentes en el material vegetal [262].

@@ -1,0 +1,138 @@
+=== TEMA: FUNDAMENTOS DE LA CATA Y CUALIDADES ORGANOLÉPTICAS ===
+
+La cata de cannabis es un proceso crucial para quienes buscan tener una experiencia de consumo verdaderamente única.
+Al degustar y evaluar diferentes variedades, los consumidores tienen la capacidad de descubrir perfiles de sabores y efectos específicos que se adaptan mejor a sus necesidades, dolencias o preferencias individuales.
+La cata sistemática funciona como una garantía para certificar y evaluar la calidad y la consistencia del producto final.
+Se destaca la importancia de realizar la cata con responsabilidad y moderación, previniendo así la aparición de efectos no deseados.
+
+2. LA IMPORTANCIA DE LAS CUALIDADES ORGANOLÉPTICAS
+
+Identificación de gustos: El sabor y el aroma son los factores fundamentales que permiten conocer y definir los gustos personales de cada cultivador y catador.
+Hibridación moderna: Actualmente, el mercado se encuentra ante una enorme cantidad de mezclas genéticas y un entorno sumamente híbrido. Esto da lugar a una inmensa y rica paleta de sabores y olores que contiene el cannabis, la cual se puede clasificar en perfiles primarios.
+
+Perfiles de Sabores y Aromas Principales
+
+CÍTRICO: Es una cualidad muy valorada por los cultivadores y altamente habitual dentro de las cepas comerciales. Su sabor y aroma recuerdan principalmente al limón, aunque también abarca tonos muy similares a la naranja, la mandarina y el pomelo.
+
+FRUTAL: Representa un aroma frutal y dulce sumamente apreciado en la cata, ofreciendo un viaje organoléptico de alto nivel. Introduce una agradable y fresca sensación en el paladar, haciendo que el consumo (ya sea recreativo o medicinal) se transforme en una experiencia incomparable.
+
+TERROSO: Es indiscutiblemente el sabor más característico y distintivo que pueden presentar las plantas de cannabis. Se trata de un sabor penetrante y pastoso que recuerda a la tierra húmeda. Técnicamente, representa más una sensación física y una densidad en boca que un sabor a tierra literal. Es un rasgo predominante en variedades de la familia Índica, aunque se halla extendido en todo tipo de híbridos modernos.
+
+HERBAL: Ofrece una experiencia caracterizada por tonos frescos. El humo generado se percibe como un elemento que tonifica y refresca la boca en lugar de simplemente introducir humo seco. Dentro de este grupo se encuentran sabores que recuerdan a la hierba fresca, hierba seca, mentol, menta, lavanda, pino y corteza de árboles.
+
+INCIENSO: Es uno de los sabores y aromas más codiciados y profundos disponibles en el cannabis. Presenta un carácter fuertemente especiado e intenso, convirtiendo cada bocanada en una experiencia sensorial profunda, espectacular y difícil de olvidar (frecuentemente asociado al "aroma a iglesia" en genéticas de origen Haze).
+
+DIESEL: Destaca por un aroma y sabor singular y punzante que recuerda directamente a la gasolina con sutiles matices metálicos, frutales y cítricos de limón. Posee una gran intensidad que genera opiniones polarizadas (gusta mucho o no gusta nada), siendo una delicia exclusiva sumamente cotizada.
+
+CANNABIS MEDICINAL VS. CANNABIS RECREATIVO
+
+Cannabis Medicinal:
+
+Utilizado con propósitos terapéuticos específicos como el alivio del dolor crónico, la reducción de la ansiedad, la estimulación de apetito o la conciliación del sueño.
+Composición química: Típicamente presentan una alta concentración de CBD (Cannabidiol) y bajos o controlados niveles de THC. Las variedades con altos niveles de CBD y bajos niveles de THC aportan beneficios de carácter exclusivamente terapéutico sin producir ningún efecto psicoactivo o "subidón".
+En ciertas condiciones (como la pérdida severa de apetito), el cannabis medicinal requiere altos porcentajes de THC para ser efectivo.
+En última instancia, el propio usuario es quien define qué es "cannabis medicinal" según sus necesidades.
+
+Cannabis Recreativo:
+
+Se consume principalmente por placer, disfrute o entretenimiento.
+Composición química: Se eligen plantas (índicas, sativas o híbridos) que poseen concentraciones muy elevadas de THC y bajas proporciones de CBD para garantizar un subidón potente.
+Ejemplos de cepas recreativas potentes: Gorilla Glue, Girl Scout Cookies y Amnesia Haze.
+
+=== TEMA: LOS TERPENOS Y PROTOCOLO DE CATA ===
+
+LOS TERPENOS EN LA EVALUACIÓN ORGANOLÉPTICA
+
+Los terpenos son compuestos orgánicos volátiles responsables del aroma, el sabor y la modulación del efecto de los cannabinoides en el cuerpo (efecto séquito).
+
+¡Hola! Qué bueno saludarte. De una, acá tenés la lista completa y ordenada de todos los cannabinoides y terpenos que se mencionan en la Catabook, junto con sus características y propiedades técnicas, en un formato limpio para que puedas copiarlo y pegarlo directamente en tu archivo de texto (.TXT) para tu carpeta de catas:
+
+```text
+==================================================
+      CANNABINOIDES Y TERPENOS - CATABOOK
+==================================================
+
+--- CANNABINOIDES ---
+
+* THC (Tetrahidrocannabinol):
+  - Características y propiedades: Desempeña un papel fundamental en el efecto final de la planta. Proporciona el efecto psicoactivo, subidón o la relajación potente característica de las variedades recreativas. En variedades medicinales con alto THC, se utiliza para tratar síntomas específicos de ciertas afecciones, como la pérdida de apetito.
+
+* CBD (Cannabidiol):
+  - Características y propiedades: Ofrece beneficios exclusivamente terapéuticos sin producir ningún tipo de subidón o efecto psicoactivo. Se utiliza principalmente para aliviar el dolor, combatir la ansiedad y ayudar a conciliar el sueño. Suele encontrarse en buena proporción en variedades medicinales acompañado de una baja concentración de THC.
+
+
+--- TERPENOS ---
+
+* Mirceno:
+  - Características y propiedades: Terpeno de efecto relajante, muy común en variedades de cannabis con predominancia índica.
+
+* Farneseno:
+  - Características y propiedades: Terpeno de perfil fresco y dulce, característico de cepas con mayor influencia sativa.
+
+* Bergamoteno:
+  - Características y propiedades: Terpeno que aporta matices frescos y dulces en genéticas sativa-dominantes.
+
+* Limoneno:
+  - Características y propiedades: Terpeno conocido por brindar propiedades energizantes.
+
+* Pineno:
+  - Características y propiedades: Terpeno que aporta notas aromáticas a pino y puede generar efectos tanto edificantes como relajantes.
+
+* Eucaliptol:
+  - Características y propiedades: Responsable del olor mentolado y matices a tierra en ciertas genéticas. Presente en el aceite esencial de eucalipto, posee un aroma muy fresco a menta. Se le atribuyen propiedades fungicidas, analgésicas y la capacidad de mejorar la concentración, siendo habitual en variedades utilizadas para la meditación.
+
+* Geraniol:
+  - Características y propiedades: Presente en especies como la hierba-limón, las zanahorias, los arándanos y la marihuana. Añade un perfil de sabores exquisitos afrutados, florales, dulces y cítricos a los cogollos de cannabis.
+
+* Nerolidol:
+  - Características y propiedades: Encontrado en el jengibre, la citronela y el niaouli, muy utilizado como agente saborizante y en perfumería. Posee un aroma leñoso y terroso que recuerda a la corteza de árbol. Destaca por sus efectos sedantes y relajantes, además de atribuírsele propiedades antifúngicas y efectividad en el tratamiento de la malaria.
+
+* Borneol:
+  - Características y propiedades: Terpeno aromático presente en la planta, asociado a notas frescas y a pino.
+```
+
+
+
+9. FICHA TÉCNICA Y PROTOCOLO DE CATA DE CANNABIS
+
+La evaluación de los efectos del cannabis representa la fase más subjetiva de todo el proceso de cata, estando muy influenciada por la fisiología del individuo. Durante la sesión de cata, se deben medir y calificar con precisión los siguientes parámetros en una escala del 1 (malo) al 5 (excelente):
+
+Parámetros de Evaluación del Efecto:
+
+Rapidez: Tiempo transcurrido desde la calada hasta la percepción del primer efecto.
+
+Duración: Tiempo total de persistencia de los efectos psicoactivos o físicos.
+
+Techo o Cumbre: El punto de máxima intensidad del subidón o colocón.
+
+Tolerancia: Evaluación de si la muestra requiere mayor cantidad de consumo para repetir el efecto.
+
+Tipo de efecto: Clasificación del efecto (cerebral, físico, estimulante, sedante, etc.).
+
+Estructura de la Ficha de Registro de la Muestra:
+
+Datos Generales: Nombre del Catador, Fecha de la Cata, Muestra Nº, Lugar de la Cata.
+
+Propiedades Físicas Visuales y Mecánicas:
+
+Aspecto: Las flores (cogollos) deben presentarse perfectamente manicuradas, completamente libres de semillas y de tallos o ramas innecesarias.
+
+Color de la hierba y Color de los Pistilos.
+
+Color de los Tricomas (bajo lupa/microscopio).
+
+Densidad de la hierba, Esponjosidad y Nivel de Pegajosidad (resina).
+
+Estado físico: Crujiente, Seca o Pastosa.
+
+Evaluación de Combustión:
+
+Color de la ceniza (indica la limpieza de nutrientes en el lavado de raíces).
+
+Clasificación de Consumo:
+
+Genética y Modo de Consumo.
+
+Calificación Final (Escala 1 al 5).
+
+Derechos de registro: Todos los derechos reservados bajo la numeración Nº 1 5 4 8 8 6 1 R.

@@ -1,0 +1,24 @@
+AGUA Y RIEGO
+
+CALIDAD DEL AGUA: PH, DUREZA Y CLORO
+
+pH
+El pH indica acidez o alcalinidad. Su importancia está relacionada con la disponibilidad de nutrientes.
+
+DUREZA
+La dureza representa principalmente la concentración de minerales como calcio y magnesio. Puede variar considerablemente según la fuente de agua.
+
+CLORO
+El agua potable puede contener desinfectantes. Su impacto depende del compuesto utilizado y de su concentración.
+
+MEDICIÓN
+No conviene asumir que el agua de red tiene siempre las mismas características. Si el cultivo depende de un control preciso, medir permite conocer la condición real.
+
+SUSTRATO
+El rango adecuado de pH depende del sistema. Tierra, coco e hidroponía no se manejan exactamente igual.
+
+ERROR FRECUENTE
+Corregir el pH sin conocer la calidad inicial del agua o utilizar valores de un sistema diferente.
+
+CONCEPTO CLAVE
+La calidad del agua es una parte del sistema nutricional y debe interpretarse junto con el sustrato y la fertilización.

@@ -1,0 +1,25 @@
+TIPOS DE ILUMINACIÓN: LED, HPS, MH Y CMH:
+
+OBJETIVO
+Comprender las principales tecnologías de iluminación indoor y sus diferencias generales.
+
+LED
+Los LED modernos ofrecen buena eficiencia energética, baja emisión térmica relativa y modelos adecuados para distintas etapas. La cobertura real depende del diseño y potencia de la luminaria.
+
+HPS
+Las lámparas de alta presión de sodio fueron muy utilizadas en floración por su intensidad luminosa. Generan bastante calor y requieren una gestión térmica adecuada.
+
+MH
+Las lámparas de halogenuros metálicos se utilizaron especialmente durante crecimiento vegetativo. También generan calor y consumen más energía que muchas soluciones LED actuales.
+
+CMH
+Las lámparas de halogenuros metálicos cerámicos ofrecen un espectro amplio y buena intensidad, pero también producen calor y requieren instalación apropiada.
+
+ELECCIÓN
+La decisión debe considerar superficie a iluminar, etapa, eficiencia, calor producido, altura disponible, consumo eléctrico y especificaciones reales del fabricante.
+
+ERROR FRECUENTE
+Elegir por potencia nominal o apariencia de la lámpara sin comprobar cobertura, eficiencia y condiciones térmicas.
+
+CONCEPTO CLAVE
+No existe una tecnología universalmente mejor: la iluminación debe ser adecuada al espacio y poder mantenerse a una distancia y temperatura compatibles con la planta.

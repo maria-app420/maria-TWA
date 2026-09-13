@@ -1,0 +1,77 @@
+================================================================================
+GUÍA PROFESIONAL DE NUTRICION PARA CANNABIS: PASO A PASO
+================================================================================
+
+1. MACRO Y MICRONUTRIENTES FUNDAMENTALES
+--------------------------------------------------------------------------------
+Las plantas de cannabis requieren una nutrición específica según su etapa de desarrollo. Los nutrientes se dividen en tres grupos clave:
+
+* Macronutrientes (los principales, N-P-K):
+  - Nitrógeno (N): Esencial para el crecimiento vegetativo, desarrollo de hojas y masa verde.
+  - Fósforo (P): Fundamental para la formación de raíces y la floración.
+  - Potasio (K): Clave para la densidad, resina y engorde de los cogollos.
+
+* Nutrientes Secundarios:
+  - Calcio (Ca): Fortalece las paredes celulares, reduce la salinidad y mejora la penetración de agua.
+  - Magnesio (Mg): Motor de la fotosíntesis y la estabilización celular.
+  - Azufre (S): Indispensable para la clorofila, proteínas, enzimas y vitaminas.
+
+* Micronutrientes (indispensables en pequeñas dosis):
+  - Boro, Cloro, Cobre, Hierro, Manganeso, Molibdeno y Zinc.
+
+
+2. NECESIDADES NUTRICIONALES SEGÚN LA FASE DEL CULTIVO
+--------------------------------------------------------------------------------
+Cada etapa de la planta exige una relación NPK diferente. Tené en cuenta estos rangos recomendados:
+
+* Fase de Plántula (Semanas 1 a 3-4):
+  - No fertilices. La semilla cuenta con sus propias reservas de nutrientes y la plántula absorbe humedad por las hojas mientras desarrolla sus raíces.
+
+* Fase Vegetativa (Crecimiento):
+  - Inicio: Arrancá suave con un NPK 2:1:2 o 4:2:3 para que la planta se acostumbre sin sufrir quemaduras.
+  - Etapa Media (Semana 6 aprox.): Aumentá el Nitrógeno a un NPK 10:5:7 para lograr un follaje frondoso y fuerte.
+  - Etapa Final: Reducí el Nitrógeno a un NPK 7:7:7 preparando el cambio hacia la floración.
+
+* Fase de Floración:
+  - Inicio (Primeras 2 semanas): Cambiá la dieta a un NPK 5:7:10 (menos Nitrógeno, más Fósforo y Potasio).
+  - Floración Media: Incrementá el Potasio a un NPK 6:10:15 para maximizar la producción de flores y resina.
+  - Floración Final: Bajá la concentración a un NPK 4:7:10 en las semanas previas al cierre.
+  - Etapa Final: Suspendé los fertilizantes y realizá lavado de raíces con agua sola de pH equilibrado.
+
+
+3. PASO A PASO PARA PREPARAR Y APLICAR EL RIEGO
+--------------------------------------------------------------------------------
+Para alimentar correctamente tus plantas sin cometer errores, seguí estos pasos:
+
+1. Temperatura del agua: Entibiar el agua entre 19°C y 21°C para optimizar la absorción por parte de las raíces.
+2. Mezcla de fertilizantes: Agregá los productos al agua según la dosis sugerida y diluí completamente.
+3. Medición de EC / PPM: Medí la conductividad eléctrica (EC) o partes por millón (PPM). Si el sustrato ya conserva nutrientes, restale esos valores a la dosis teórica para evitar la sobrefertilización.
+4. Ajuste de pH: Corregí el pH utilizando un producto reductor (a base de ácido nítrico o fosfórico).
+5. Aplicación y drenaje: Regá la planta y medí la EC/PPM del agua de escorrentía (drenaje) para verificar que la raíz esté absorbiendo los nutrientes de forma eficiente.
+
+
+4. FERTILIZANTES ORGÁNICOS VS. SINTÉTICOS
+--------------------------------------------------------------------------------
+* Orgánicos:
+  - Ventajas: Liberación lenta, cuidan y potencian la microbiota del suelo, reducen significativamente el riesgo de quemaduras por nutrientes, no generan escorrentías tóxicas y mejoran el sabor final.
+  - Ideal para: Cultivos sostenibles y plantas en exterior.
+
+* Sintéticos / Químicos:
+  - Ventajas: Absorción rápida (ideales para corregir deficiencias severas a corto plazo) y control analítico preciso sobre las proporciones de NPK.
+  - Riesgo: Mayor concentración, lo que aumenta la posibilidad de sobrefertilización o acumulaciones de sales si te pasás de dosis.
+
+
+5. CONSEJOS PROFESIONALES DE MANEJO
+--------------------------------------------------------------------------------
+* Uso de Quelatos: Utilizá quelatos (como ácidos húmicos y fúlvicos en cultivos orgánicos) para envolver los minerales con cargas neutras o negativas, facilitando que atraviesen la pared celular.
+* Riego Foliar: Aplicá pulverizaciones finas sobre el follaje para solucionar deficiencias urgentes de micronutrientes (Hierro, Zinc, Manganeso) o secundarios (Calcio y Magnesio).
+* Lavado de Raíces Obligatorio: Realizá un lavado con agua sola (pH ajustado) durante al menos una semana antes de cosechar. Esto obliga a la planta a consumir los nutrientes acumulados en sus tejidos, garantizando un producto final limpio y de sabor suave.
+
+
+6. PREVENCIÓN Y RESOLUCIÓN DE PROBLEMAS
+--------------------------------------------------------------------------------
+* Desequilibrios de pH: Dificultan la absorción de nutrientes y provocan bloqueos. Mantené siempre el agua y el suelo dentro del rango de pH recomendado.
+* Quemaduras por Nutrientes: Se identifican por hojas verde oscuro con puntas verde-neón dobladas a 90° y tallos púrpuras/rojos. Se corrige haciendo un lavado de raíces y reintroduciendo nutrientes gradualmente.
+* Bloqueo de Nutrientes (Lockout): Salinización en las raíces o pH desajustado. Produce hojas amarillas, manchas marrones y malformaciones. Requiere lavado de raíces, ajuste de pH y adecuación de la dosis.
+* Deficiencias Nutricionales: Provocadas por falta de fertilización o bloqueo. Confirmá el origen antes de agregar más producto para no empeorar el cuadro.
+================================================================================

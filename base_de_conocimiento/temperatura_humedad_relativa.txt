@@ -1,0 +1,25 @@
+CONTROL DE TEMPERATURA Y HUMEDAD RELATIVA POR ETAPA
+
+OBJETIVO
+Evitar extremos ambientales que reduzcan crecimiento, favorezcan enfermedades o generen estrés.
+
+VEGETATIVO
+La planta suele tolerar una humedad relativa algo mayor que durante floración, siempre que exista buena circulación y no haya condensación.
+
+FLORACIÓN
+Al avanzar la floración se busca controlar especialmente la humedad para reducir el riesgo de botrytis y otros problemas relacionados con exceso de humedad.
+
+TEMPERATURA
+La temperatura afecta transpiración, metabolismo y consumo de agua. Valores extremos, tanto altos como bajos, pueden producir estrés.
+
+MEDICIÓN
+El dato debe medirse a la altura del dosel vegetal, no solamente fuera de la carpa.
+
+RELACIÓN
+Temperatura y humedad deben interpretarse juntas. Un mismo porcentaje de humedad no representa la misma condición con temperaturas muy diferentes.
+
+ERROR FRECUENTE
+Intentar corregir humedad únicamente con riego, sin revisar extracción, temperatura y circulación.
+
+CONCEPTO CLAVE
+La estabilidad ambiental es más importante que perseguir un número aislado. Las condiciones deben adaptarse a etapa, genética y sistema.

@@ -1,0 +1,100 @@
+CÓMO Y CUÁNDO REGAR:
+
+OBJETIVO
+Aportar agua suficiente sin mantener las raíces permanentemente saturadas.
+
+CUÁNDO
+El momento depende de tamaño de planta, volumen de recipiente, sustrato, temperatura, humedad y etapa. El peso del recipiente y el estado del medio son indicadores útiles.
+
+CANTIDAD
+No existe una cantidad universal por planta. Hay que considerar la capacidad del recipiente y el drenaje.
+
+EXCESO
+Puede provocar hojas caídas, sustrato constantemente húmedo, menor oxigenación radicular y problemas de raíz.
+
+FALTA
+Puede producir marchitez, crecimiento detenido y sustrato excesivamente seco.
+
+RIEGO AUTOMATIZADO
+Es una variante del mismo principio: debe entregar agua según las necesidades reales y contar con drenaje y control.
+
+ERROR FRECUENTE
+Regar por calendario fijo aunque la planta y el sustrato indiquen otra condición.
+
+CONCEPTO CLAVE
+La frecuencia de riego se determina por la interacción entre planta, sustrato y ambiente, no por una cifra fija.
+
+
+AHORRO DE AGUA Y ENERGÍA EN EL CULTIVO:
+
+
+DESCRIPCIÓN
+Tanto el agua como la energía eléctrica (especialmente relevante en
+indoor) son recursos con impacto económico y ambiental directo en el
+cultivo. Existen prácticas simples que ayudan a optimizar su uso sin
+perjudicar el desarrollo de la planta.
+
+AHORRO DE AGUA
+
+Riego consciente según necesidad real (no por costumbre)
+- Regar siguiendo las señales reales de necesidad de la planta (ver
+  tema de riego), en lugar de un horario fijo, evita el desperdicio
+  de agua que se da al regar "de más" sin que la planta lo requiera.
+
+Mulching (cobertura del sustrato)
+- Cubrir la superficie del sustrato con una capa de material
+  orgánico (paja, hojas secas trituradas, u otro material similar)
+  ayuda a reducir la evaporación de agua desde la superficie,
+  disminuyendo la frecuencia de riego necesaria, especialmente
+  relevante en outdoor durante días de mucho calor.
+
+Recolección de agua de lluvia
+- En outdoor, recolectar agua de lluvia (con recipientes adecuados,
+  evitando materiales de techo que puedan contaminarla) es una forma
+  directa de reducir el consumo de agua de red, además de ser una
+  fuente de buena calidad para el riego (ver tema de calidad del
+  agua).
+
+Sistemas de riego automatizado por goteo
+- En cultivos de mayor escala, un sistema de goteo bien calibrado
+  puede ser más eficiente en el uso del agua que el riego manual, al
+  aportar la cantidad justa de forma más controlada y pareja.
+
+AHORRO DE ENERGÍA (PRINCIPALMENTE INDOOR)
+
+Elección de tecnología de iluminación eficiente
+- Los paneles LED, en comparación con tecnologías más antiguas como
+  HPS o MH, ofrecen una mayor eficiencia energética (más luz útil por
+  cada vatio consumido), lo que se traduce en un menor consumo
+  eléctrico para una producción equivalente (ver tema de tipos de
+  iluminación).
+
+Uso de temporizadores (timers) bien calibrados
+- Evitar que las luces queden encendidas más tiempo del necesario por
+  errores de programación es una forma simple pero efectiva de
+  reducir el consumo energético.
+
+Buen aislamiento del espacio de cultivo
+- Un espacio bien aislado (por ejemplo, una carpa de cultivo de
+  buena calidad) retiene mejor la temperatura generada por las
+  luces, reduciendo la necesidad de calefacción adicional en climas
+  fríos.
+
+Mantenimiento de equipos
+- Extractores, ventiladores y luces sucios o mal mantenidos suelen
+  perder eficiencia con el tiempo, consumiendo más energía para
+  lograr el mismo resultado. Una limpieza y mantenimiento periódico
+  ayuda a mantener la eficiencia original de los equipos.
+
+Dimensionamiento correcto de los equipos
+- Sobredimensionar luces, extractores o climatizadores por encima de
+  lo que realmente necesita el espacio de cultivo genera un consumo
+  energético innecesario, sin un beneficio real adicional para la
+  planta.
+
+DATO PRÁCTICO
+Muchas de las prácticas de ahorro de agua y energía coinciden,
+además, con buenas prácticas generales de cultivo (evitar excesos de
+riego, buen dimensionamiento de equipos, buen mantenimiento), por lo
+que cultivar de forma más eficiente en recursos suele ir de la mano
+con cultivar de forma más sana para la propia planta.

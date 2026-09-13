@@ -1,0 +1,154 @@
+LISTA DE HERRAMIENTAS BÁSICAS PARA UN CULTIVADOR 
+
+HERRAMIENTAS DE MEDICIÓN (PRIORIDAD ALTA)
+- Medidor de pH: para controlar el pH del agua/solución de riego (ver
+  tema de pH y EC/PPM). Es una de las inversiones más importantes que
+  puede hacer un cultivador.
+- Medidor de EC/PPM: para controlar la concentración de fertilizante
+  en la solución de riego. Muchas veces viene combinado con el
+  medidor de pH en un solo instrumento.
+- Termohigrómetro: mide temperatura y humedad relativa del ambiente
+  de cultivo (ver tema de temperatura y humedad). Fundamental tanto
+  en indoor como durante el secado y curado.
+- Lupa de mano (30x-60x de aumento): imprescindible para revisar
+  tricomas (punto de cosecha), detectar plagas tempranas, y en
+  general cualquier revisión de detalle en hojas y cogollos.
+
+LUPA/MICROSCOPIO - USO CORRECTO:
+
+DESCRIPCIÓN
+La lupa (o microscopio digital) es una de las herramientas más
+utilizadas por cualquier cultivador, con dos aplicaciones
+principales: la lectura de tricomas para determinar el punto de
+cosecha, y la detección temprana de plagas.
+
+TIPOS DE LUPA/MICROSCOPIO MÁS USADOS
+- Lupa de mano tradicional (30x-60x de aumento): económica, portátil,
+  suficiente para la gran mayoría de los usos de un cultivador
+  hogareño.
+- Lupa con luz LED incorporada: similar a la anterior, pero con
+  iluminación propia, lo que facilita mucho la observación en
+  ambientes con poca luz (como el interior de una carpa de cultivo).
+- Microscopio digital USB: se conecta a una computadora o celular,
+  ofreciendo mayor aumento, mayor comodidad de uso (pantalla en lugar
+  de acercar el ojo) y la posibilidad de capturar fotos para llevar
+  un registro visual de la evolución de tricomas o plagas.
+
+USO PARA LA LECTURA DE TRICOMAS (PUNTO DE COSECHA)
+- Revisar varios cogollos de distintas zonas de la planta (parte
+  alta, media y baja), ya que la maduración puede no ser
+  perfectamente uniforme en toda la planta.
+- Enfocar directamente sobre la cabeza del tricoma (la parte más
+  redondeada, similar a un pequeño "hongo"), observando su color y
+  transparencia (ver tema de tricomas y punto de cosecha para el
+  detalle de cada estado).
+- Repetir la observación cada 2-3 días hacia el final de la
+  floración, para seguir la evolución y decidir el momento óptimo de
+  corte.
+
+USO PARA LA DETECCIÓN TEMPRANA DE PLAGAS
+- Revisar especialmente el envés de las hojas (donde se ocultan la
+  mayoría de las plagas comunes: araña roja, mosca blanca, trips,
+  cochinillas), ver bloque de plagas para el detalle de cada una.
+- Observar tanto insectos/ácaros en movimiento como huevos, que suelen
+  ser aún más pequeños y difíciles de detectar a simple vista.
+- La revisión periódica con lupa (idealmente 1-2 veces por semana)
+  permite detectar una plaga en sus primeras etapas, cuando es mucho
+  más fácil de controlar que una vez que la infestación ya es
+  visible a simple vista.
+
+HERRAMIENTAS DE CORTE Y MANEJO DE LA PLANTA (PRIORIDAD ALTA)
+- Tijera de podar: para cortes de ramas gruesas, cosecha y técnicas
+  de poda/entrenamiento.
+- Tijera de manicurar (más pequeña y precisa): para el recorte fino
+  de hojas alrededor del cogollo (ver tema de manicurado).
+- Guantes: para manipular resina pegajosa y proteger las manos
+  durante tareas de poda y cosecha.
+
+HERRAMIENTAS PARA RIEGO Y FERTILIZACIÓN (PRIORIDAD MEDIA-ALTA)
+- Regadera con boquilla fina o jarra medidora: para controlar mejor
+  la cantidad de agua/solución aplicada en cada riego.
+- Recipientes para preparar la solución de riego (baldes, jarras
+  graduadas), donde se mezcla el fertilizante antes de medir pH/EC y
+  recién ahí regar.
+
+HERRAMIENTAS PARA EL AMBIENTE INDOOR (PRIORIDAD ALTA EN INDOOR)
+- Timer/temporizador para el fotoperiodo de luces (ver tema de
+  fotoperiodo indoor): fundamental para mantener un ciclo de luz
+  consistente.
+- Ventilador de circulación interna: fortalece el tallo y evita
+  bolsones de humedad (ver tema de ventilación).
+
+
+TIMERS, CONTROLADORES DE CLIMA Y AUTOMATIZACIÓN BÁSICA:
+
+TIMERS (TEMPORIZADORES) PARA ILUMINACIÓN
+- Es, junto con el propio sistema de luces, uno de los elementos más
+  importantes en un cultivo indoor: permite automatizar el encendido
+  y apagado de las luces según el fotoperiodo elegido (18/6, 12/12,
+  etc.), sin depender de que una persona lo haga manualmente todos
+  los días a la misma hora.
+- Tipos más comunes:
+  - Timer mecánico: con una rueda de horarios física, económico pero
+    menos preciso y más sujeto a desajustes con el tiempo.
+  - Timer digital: mayor precisión horaria, y en muchos casos permite
+    programar varios horarios de encendido/apagado por día si fuera
+    necesario.
+- Importancia de un timer confiable: cualquier inconsistencia en el
+  horario de luz/oscuridad (aunque sea de pocos días) puede generar
+  estrés en la planta durante floración, incluyendo riesgo de
+  hermafroditismo (ver temas de fotoperiodo indoor y hermafroditismo).
+
+CONTROLADORES DE TEMPERATURA Y HUMEDAD
+- Termostatos: permiten conectar un calefactor o un ventilador/
+  extractor a un controlador que los enciende o apaga
+  automáticamente según la temperatura configurada como objetivo,
+  sin necesidad de ajuste manual constante.
+- Higrostatos: cumplen la misma función pero en relación a la
+  humedad relativa, activando por ejemplo un deshumidificador cuando
+  la humedad supera un umbral definido.
+- Controladores combinados (temperatura + humedad): existen equipos
+  que integran ambas funciones en un solo dispositivo, controlando de
+  forma automática varios equipos del espacio de cultivo (extractor,
+  calefactor, deshumidificador) según los valores configurados.
+
+RIEGO AUTOMATIZADO BÁSICO (MENCIÓN GENERAL)
+- Sistemas de riego por goteo con temporizador propio, que permiten
+  automatizar la frecuencia y cantidad de riego sin depender de la
+  disponibilidad diaria del cultivador.
+- Especialmente útil para quienes no pueden estar presentes todos los
+  días (viajes, ausencias prolongadas), o para cultivos de mayor
+  escala donde el riego manual de todas las plantas sería muy
+  demandante en tiempo.
+
+DATO PRÁCTICO
+El timer de luces es, de todos los elementos de automatización, el
+más económico y el que ofrece mayor beneficio en relación a su costo,
+por lo que suele ser el primer paso de automatización que adopta
+prácticamente cualquier cultivador indoor, incluso antes de pensar en
+controladores de clima más avanzados.
+
+ELEMENTOS PARA MONITOREO Y PREVENCIÓN DE PLAGAS (PRIORIDAD MEDIA)
+- Trampas cromáticas (amarillas y azules): para monitoreo temprano de
+  mosca blanca, minador de hojas y trips (ver bloque de plagas).
+
+ELEMENTOS PARA SECADO Y CURADO (PRIORIDAD ALTA AL LLEGAR A ESA ETAPA)
+- Ganchos, percheros o cuerda con clips: para el secado colgado (ver
+  tema de secado).
+- Frascos de vidrio herméticos: para el curado y almacenamiento (ver
+  temas correspondientes).
+- Higrómetro pequeño o packs de control de humedad para el interior
+  de los frascos de curado.
+
+REGISTRO DEL CULTIVO (PRIORIDAD ALTA, COSTO NULO)
+- Un simple cuaderno, planilla o incluso una app de notas para
+  registrar fechas de germinación, cambios de etapa, aplicaciones de
+  fertilizante y cualquier observación relevante (ver tema de
+  errores comunes indoor, donde se menciona la importancia de este
+  registro).
+
+DATO PRÁCTICO
+Si el presupuesto inicial es limitado, las prioridades más rentables
+para empezar bien son: medidor de pH/EC, termohigrómetro y lupa de
+mano. Son herramientas económicas que previenen la gran mayoría de
+los problemas más comunes de un cultivo principiante.
