@@ -1,8 +1,10 @@
 {
   "name": "marIA - Asistente de Cultivo",
   "short_name": "marIA",
+  "description": "Asistente inteligente de cultivo y guía experta para marIA",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#112211",
   "theme_color": "#2e7d32",
   "icons": [
