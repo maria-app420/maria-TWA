@@ -22,11 +22,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: 4. Instalar Capacitor y dependencias
+      - name: 4. Instalar dependencias y Capacitor
         run: |
           npm install
           npx cap init marIA cultiva.maria.app --web-dir .
-          npm install @capacitor/android
           npx cap add android
 
       - name: 5. Compilar el APK nativo
@@ -37,5 +36,5 @@ jobs:
       - name: 6. Subir el APK generado
         uses: actions/upload-artifact@v4
         with:
-          name: maria420-apk
+          name: marIA-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
