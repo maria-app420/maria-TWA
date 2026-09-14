@@ -14,6 +14,14 @@ self.addEventListener('install', event => {
         return cache.addAll(urlsToCache);
       })
   );
+  self.skipWaiting();
+});
+
+// Activación y control inmediato
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    clients.claim()
+  );
 });
 
 // Interceptar peticiones para que funcione offline
