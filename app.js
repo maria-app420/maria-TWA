@@ -6,6 +6,19 @@
 let currentImageB64 = null;
 let previewObjectUrl = null;
 
+// REGISTRO AUTOMÁTICO DEL SERVICE WORKER PARA PWABUILDER Y MODO OFFLINE
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('[marIA] ServiceWorker registrado con éxito en el ámbito:', registration.scope);
+            })
+            .catch(error => {
+                console.log('[marIA] Falló el registro del ServiceWorker:', error);
+            });
+    });
+}
+
 /* ------------------------------------------------------------
    ÍNDICE LIVIANO DE CONOCIMIENTO
    Cada entrada = 1 archivo = 1 tema. NO carga contenido, solo
@@ -76,29 +89,8 @@ const INDICE_CONOCIMIENTO = [
   { archivo: "base_de_conocimiento/ventilacion.txt", titulo: "Ventilación y extracción", raices: ["ventilacion", "extraccion de aire", "extractor", "intraccion"] }
 ];
 
-// Cache en memoria: una vez que se lee un archivo, no se vuelve a
-// hacer fetch de él en la misma sesión de uso de la app.
 const cacheArchivos = {};
 
-// Diccionario local offline de sinónimos para expandir la búsqueda (incluyendo plurales)
-const SINONIMOS = {
-    "raiz": ["raiz", "raíces", "lavado de raíces", "flushing", "lavar"],
-    "cosecha": ["cosecha", "cortar", "corte", "momento de corte", "madurez"],
-    "tricomas": ["tricomas", "resina", "glándulas", "lechosos", "ámbar"],
-    "plaga": ["plaga", "plagas", "botrytis", "oidio", "insectos", "araña roja"],
-    "dolor": ["dolor", "analgésico", "reuma", "fibromialgia", "neuropático"],
-    "legal": ["legal", "ley", "reprocann", "permiso", "habilitación"],
-    "esqueje": ["esqueje", "esquejes", "clon", "clones"],
-    "riego": ["riego", "reguar", "regué", "agua", "regar", "humedad", "suelo"],
-    "exceso": ["exceso", "pasé", "pase", "saturación", "encharcado", "inundado"],
-    "amarillas": ["amarillas", "amarilla", "clorosis", "decoloración"],
-    "nutricion": ["nutricion", "nutrientes", "abono", "fertilizante", "comida", "npk", "quemadas"],
-    "luz": ["luz", "foco", "led", "potencia", "calor", "fotoperiodo", "horas"],
-    "germinacion": ["germinacion", "germinar", "semilla", "semillas", "plantula"],
-    "clima": ["clima", "temperatura", "humedad", "ventilacion", "extraccion", "carpa"]
-};
-
-// Cuando la página carga por completo
 window.addEventListener('load', async () => {
     inicializarChatConMemoria();
     inicializarIndiceConocimiento();
@@ -111,22 +103,17 @@ window.addEventListener('load', async () => {
     }, 1200);
 });
 
-// Inicialización del índice liviano (ya no hace fetch de nada al arrancar)
 function inicializarIndiceConocimiento() {
     console.log(`[marIA] Índice cargado. Temas disponibles: ${INDICE_CONOCIMIENTO.length}`);
 }
 
-// Saludo inicial inteligente: recuerda nombre guardado y detecta bitácora activa
 function inicializarChatConMemoria() {
     let nombreUsuario = localStorage.getItem('maria_usuario_nombre');
     let saludo = "";
-
     let datosBitacora = null;
     try {
         const rawBitacora = localStorage.getItem('maria_bitacora');
-        if (rawBitacora) {
-            datosBitacora = JSON.parse(rawBitacora);
-        }
+        if (rawBitacora) datosBitacora = JSON.parse(rawBitacora);
     } catch(e) {}
 
     if (nombreUsuario && datosBitacora && datosBitacora.planta) {
@@ -136,11 +123,9 @@ function inicializarChatConMemoria() {
     } else {
         saludo = "¡Buenas! Soy marIA, tu asistente inteligente de cultivo. ¿Cómo te llamás y de qué provincia me escribís?";
     }
-
     agregarElementoMensaje(saludo, 'maria');
 }
 
-// Funciones para manejar la ventana de la Bitácora
 function abrirBitacora() {
     const rawData = localStorage.getItem('maria_bitacora');
     if (rawData) {
@@ -174,7 +159,6 @@ function guardarBitacora() {
         ec: document.getElementById('bitEc') ? document.getElementById('bitEc').value.trim() : '',
         riego: document.getElementById('bitRiego') ? document.getElementById('bitRiego').value.trim() : ''
     };
-    
     localStorage.setItem('maria_bitacora', JSON.stringify(bitacora));
     cerrarBitacora();
     alert("¡Bitácora de cultivo actualizada con éxito!");
@@ -183,13 +167,10 @@ function guardarBitacora() {
 function borrarBitacora() {
     if (confirm("¿Estás seguro de que querés borrar los datos de tu bitácora actual?")) {
         localStorage.removeItem('maria_bitacora');
-        
-        // Limpiar campos del modal
         if (document.getElementById('bitPlanta')) document.getElementById('bitPlanta').value = '';
         if (document.getElementById('bitPh')) document.getElementById('bitPh').value = '';
         if (document.getElementById('bitEc')) document.getElementById('bitEc').value = '';
         if (document.getElementById('bitRiego')) document.getElementById('bitRiego').value = '';
-        
         cerrarBitacora();
         alert("Bitácora reiniciada.");
     }
@@ -200,25 +181,18 @@ function scrollChatToBottom() {
     if (chat) chat.scrollTop = chat.scrollHeight;
 }
 
-// MOTOR DE BÚSQUEDA DEFINITIVO (DEVUELVE EL ARCHIVO COMPLETO)
 async function buscarEnConocimiento(consulta) {
-    const textoLower = consulta.toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, '');
-
+    const textoLower = consulta.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
     let archivoEncontrado = null;
     let tituloEncontrado = "";
 
     for (let item of INDICE_CONOCIMIENTO) {
         const coincide = item.raices.some(raiz => {
             const raizNorm = raiz.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
-            if (raizNorm.includes(' ')) {
-                return textoLower.includes(raizNorm);
-            }
+            if (raizNorm.includes(' ')) return textoLower.includes(raizNorm);
             const regex = new RegExp(`\\b${raizNorm}\\b`, 'i');
             return regex.test(textoLower);
         });
-
         if (coincide) {
             archivoEncontrado = item.archivo;
             tituloEncontrado = item.titulo;
@@ -241,14 +215,9 @@ async function buscarEnConocimiento(consulta) {
         }
     }
 
-    // Limpiamos caracteres de formato decorativo y separamos el texto en párrafos
     let textoLimpio = contenido.replace(/[*_#`=-]/g, '').trim();
     let fragmentos = textoLimpio.split(/\n\s*\n/).map(f => f.trim()).filter(f => f.length > 15);
-
-    // Mapeamos TODO el contenido del archivo sin recortes arbitrarios
-    let cuerpoRespuesta = fragmentos
-        .map(parrafo => `<p style="font-size: 14px; line-height: 1.5; margin-bottom: 12px;">${parrafo}</p>`)
-        .join('');
+    let cuerpoRespuesta = fragmentos.map(parrafo => `<p style="font-size: 14px; line-height: 1.5; margin-bottom: 12px;">${parrafo}</p>`).join('');
 
     const introsAmigables = [
         "¡Dale, acá tenés la guía completa sobre esto:",
@@ -262,7 +231,6 @@ async function buscarEnConocimiento(consulta) {
     return `<span style="font-size: 14px;">${introAleatoria}</span><br><br><span style="font-size: 15px; font-weight: bold;">📖 marIA — ${tituloEncontrado}</span><br><br>${cuerpoRespuesta}`;
 }
 
-// Función principal cuando el usuario envía un mensaje
 async function enviarMensaje() {
     const input = document.getElementById('userInput');
     if (!input) return;
@@ -278,31 +246,23 @@ async function enviarMensaje() {
     input.value = '';
     const fileInput = document.getElementById('fileInput');
     if (fileInput) fileInput.value = '';
-    const imgPreview = document.getElementById('imgPreview');
-    if (imgPreview) imgPreview.src = '';
     const previewContainer = document.getElementById('previewContainer');
     if (previewContainer) previewContainer.style.display = 'none';
-    const clipBtn = document.getElementById('clipBtn');
-    if (clipBtn) clipBtn.classList.remove('has-file');
 
     agregarCargando();
     scrollChatToBottom();
 
     setTimeout(async () => {
         quitarCargando();
-        
         let respuestaFinal = null;
         const textoLower = texto.toLowerCase();
         
-        // Detección natural de presentación ("soy X" o "me llamo X")
         if (textoLower.includes('soy ') || textoLower.includes('me llamo ')) {
             const partes = texto.split(/soy |me llamo /i);
             if (partes[1]) {
                 let nombreDetectado = partes[1].trim().split(' ')[0];
                 nombreDetectado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
-                
                 localStorage.setItem('maria_usuario_nombre', nombreDetectado);
-                
                 respuestaFinal = `¡Un gusto, **${nombreDetectado}**! 🍁 Ya tomé nota de tu nombre. ¿Qué dudas tenés hoy con los manuales?`;
             }
         }
@@ -310,13 +270,9 @@ async function enviarMensaje() {
         if (!respuestaFinal) {
             const palabrasUsuario = textoLower.replace(/[¿?¡!.,]/g, '').trim().split(/\s+/);
             const primeraPalabra = palabrasUsuario[0] || "";
-
             const esSaludo = textoLower.includes('hola') || textoLower.includes('buen dia') || textoLower.includes('que tal') || textoLower.includes('buenas');
-            
-            // Evaluamos si las palabras de agradecimiento o cierre están estrictamente al principio
             const palabrasCierre = ['gracias', 'genial', 'perfecto', 'listo', 'listos', 'chau'];
             const esAgradecimientoAlInicio = palabrasCierre.includes(primeraPalabra);
-
             let nombreUsuario = localStorage.getItem('maria_usuario_nombre') || "cultivador";
 
             if (esSaludo) {
@@ -329,7 +285,7 @@ async function enviarMensaje() {
         }
 
         if (!respuestaFinal) {
-            respuestaFinal = `No encuentro información sobre *"<i>${texto}</i>"* en mi base de conocimiento de CATABOOK. Podés consultarme sobre cultivo, plagas, esquejes, recetas o legislación y te buscaré la información exacta. 🌿`;
+            respuestaFinal = `No encuentro información sobre *"<i>${texto}</i>"* en mi base de conocimiento. Podés consultarme sobre cultivo, plagas, esquejes, recetas o legislación y te buscaré la información exacta. 🌿`;
         }
         
         agregarElementoMensaje(respuestaFinal, 'maria');
@@ -363,7 +319,6 @@ function agregarElementoMensaje(texto, emisor, urlImagen = null) {
         textContainer.textContent = texto;
         div.appendChild(textContainer);
     }
-
     chat.appendChild(div);
 }
 
