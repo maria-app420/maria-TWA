@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>marIA - Chat Inteligente de Cultivo</title>
 
-    <!-- Enlace de la PWA para que reconozca el ícono y el manifest -->
+    <!-- Configuración PWA y Theme Color -->
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Librería para renderizar Markdown (Tablas, negritas, listas) -->
+    <!-- Librería para renderizar Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <style>
-        /* --------- Variables de Color --------- */
         :root {
             --azul-principal: #2e7d32;
             --dark-bg: #112211;
@@ -47,7 +49,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --------- Pantalla de carga (Splash Screen) --------- */
         #splash-screen {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -62,11 +63,7 @@
             padding: 20px;
             transition: opacity 0.5s ease;
         }
-        #splash-screen img {
-            max-height: 80px;
-            width: auto;
-            margin-bottom: 20px;
-        }
+        #splash-screen img { max-height: 80px; width: auto; margin-bottom: 20px; }
         #splash-screen h2 { font-size: 1.8rem; margin: 10px 0; }
         #splash-screen p { color: var(--pastel-yellow); font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; }
         .spinner {
@@ -78,7 +75,6 @@
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* --------- Header --------- */
         header {
             padding: 15px 20px 10px 20px;
             text-align: center;
@@ -116,7 +112,6 @@
             box-shadow: 0 3px 8px rgba(46, 125, 50, 0.3);
         }
 
-        /* --------- Modal Bitácora --------- */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -151,11 +146,7 @@
             align-items: center;
             gap: 8px;
         }
-        .modal-content label { 
-            font-size: 13px; 
-            font-weight: 600; 
-            color: #a5d6a7; 
-        }
+        .modal-content label { font-size: 13px; font-weight: 600; color: #a5d6a7; }
         .modal-content input, 
         .modal-content select, 
         .modal-content textarea {
@@ -167,52 +158,18 @@
             font-size: 14px;
             color: #ffffff;
             outline: none;
-            transition: border-color 0.2s;
         }
         .modal-content input:focus, 
         .modal-content select:focus, 
         .modal-content textarea:focus {
             border-color: #00e676;
         }
-        .modal-content option {
-            background: #1b2e1c;
-            color: #ffffff;
-        }
-        .modal-content optgroup {
-            font-weight: bold;
-            color: #00e676;
-        }
-        .modal-actions { 
-            display: flex; 
-            justify-content: flex-end; 
-            gap: 12px; 
-            margin-top: 10px; 
-        }
-        .btn-cancelar { 
-            background: #2a3d2c; 
-            color: #cccccc; 
-            border: none; 
-            padding: 10px 18px; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            font-weight: 600; 
-            transition: background 0.2s;
-        }
-        .btn-cancelar:hover { background: #384e3a; color: #ffffff; }
-        .btn-guardar { 
-            background: #2e7d32; 
-            color: #ffffff; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            font-weight: bold; 
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
-            transition: background 0.2s;
-        }
-        .btn-guardar:hover { background: #388e3c; }
+        .modal-content option { background: #1b2e1c; color: #ffffff; }
+        .modal-content optgroup { font-weight: bold; color: #00e676; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px; }
+        .btn-cancelar { background: #2a3d2c; color: #cccccc; border: none; padding: 10px 18px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+        .btn-guardar { background: #2e7d32; color: #ffffff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4); }
 
-        /* --------- Contenedor Chat --------- */
         .chat-container {
             flex: 1;
             max-width: 750px;
@@ -249,22 +206,9 @@
             opacity: 0;
             transform: translateY(12px) scale(0.96);
             animation: popInBubble 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .message:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-        }
-
-        .message img.chat-img {
-            max-width: 100%;
-            max-height: 250px;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            display: block;
-        }
-
+        .message img.chat-img { max-width: 100%; max-height: 250px; border-radius: 10px; margin-bottom: 8px; display: block; }
         .message table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
         .message th, .message td { border: 1px solid rgba(0, 0, 0, 0.15); padding: 6px 8px; text-align: left; }
         .message th { background-color: rgba(0, 0, 0, 0.08); }
@@ -275,7 +219,6 @@
             align-self: flex-start;
             border-radius: 20px 20px 20px 4px;
             border: 1px solid #b8c0ca;
-            transform-origin: bottom left;
         }
 
         .message.user {
@@ -285,17 +228,12 @@
             border-radius: 20px 20px 4px 20px;
             box-shadow: 0 4px 14px rgba(230, 81, 0, 0.25);
             font-weight: 500;
-            transform-origin: bottom right;
         }
 
         @keyframes popInBubble {
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* --------- Contenedor Neón de Carga --------- */
         #loadingMessage {
             display: flex;
             align-items: center;
@@ -307,54 +245,16 @@
             width: fit-content;
             align-self: flex-start;
         }
-
-        .loading-text {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--texto-maria);
-            margin-right: 2px;
-        }
-
-        .neon-dots {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            animation: neonPulse 1.2s infinite ease-in-out both;
-        }
-
-        .dot-1 {
-            background-color: #1b5e20;
-            box-shadow: 0 0 6px rgba(27, 94, 32, 0.7);
-            animation-delay: 0s;
-        }
-
-        .dot-2 {
-            background-color: #2e7d32;
-            box-shadow: 0 0 8px rgba(46, 125, 50, 0.8);
-            animation-delay: 0.2s;
-        }
-
-        .dot-3 {
-            background-color: #00e676;
-            box-shadow: 0 0 10px rgba(0, 230, 118, 0.9);
-            animation-delay: 0.4s;
-        }
+        .loading-text { font-size: 14px; font-weight: 600; color: var(--texto-maria); margin-right: 2px; }
+        .neon-dots { display: flex; align-items: center; gap: 5px; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; animation: neonPulse 1.2s infinite ease-in-out both; }
+        .dot-1 { background-color: #1b5e20; animation-delay: 0s; }
+        .dot-2 { background-color: #2e7d32; animation-delay: 0.2s; }
+        .dot-3 { background-color: #00e676; animation-delay: 0.4s; }
 
         @keyframes neonPulse {
-            0%, 80%, 100% {
-                transform: scale(0.7);
-                opacity: 0.3;
-            }
-            40% {
-                transform: scale(1.25);
-                opacity: 1;
-            }
+            0%, 80%, 100% { transform: scale(0.7); opacity: 0.3; }
+            40% { transform: scale(1.25); opacity: 1; }
         }
 
         .input-area-container {
@@ -365,19 +265,6 @@
             position: sticky;
             bottom: 0;
             z-index: 10;
-            box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        #previewContainer {
-            display: none;
-            padding: 10px 22px 0 22px;
-            align-items: center;
-            gap: 10px;
-        }
-        #previewContainer img { height: 50px; width: 50px; object-fit: cover; border-radius: 8px; border: 2px solid var(--azul-ios); }
-        #previewContainer .remove-btn {
-            background: #d32f2f; color: white; border: none; border-radius: 50%; width: 22px; height: 22px; font-size: 12px; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
         }
 
         .chat-input-wrapper { padding: 12px 22px; display: flex; align-items: center; gap: 10px; }
@@ -387,7 +274,6 @@
             position: absolute; left: 10px; background: transparent; border: none; cursor: pointer; padding: 6px; display: flex;
             align-items: center; justify-content: center; border-radius: 50%; color: var(--azul-ios); z-index: 2;
         }
-        .clip-btn.has-file { background: var(--azul-ios); color: #ffffff; }
 
         .chat-input-wrapper input[type="text"] {
             width: 100%; padding: 14px 20px 14px 48px; font-size: 16px; border: none; border-radius: 30px;
@@ -407,7 +293,6 @@
 </head>
 <body>
 
-    <!-- PANTALLA DE CARGA -->
     <div id="splash-screen">
         <div class="spinner"></div>
         <img src="logo.png" alt="marIA Logo" onerror="this.style.display='none';">
@@ -427,12 +312,6 @@
         <div class="chat-messages" id="chatMessages"></div>
 
         <div class="input-area-container">
-            <div id="previewContainer">
-                <img id="imgPreview" src="" alt="Vista previa" />
-                <span style="font-size: 13px; color: #555;">Imagen adjuntada</span>
-                <button class="remove-btn" onclick="quitarImagen()">✖</button>
-            </div>
-
             <div class="chat-input-wrapper">
                 <div class="input-field-relative">
                     <button class="clip-btn" id="clipBtn" onclick="document.getElementById('fileInput').click()" title="Adjuntar foto de tu planta">
@@ -440,7 +319,7 @@
                             <path d="M16.5,6V17.5A4,4 0 0,1 12.5,21.5A4,4 0 0,1 8.5,17.5V5A2.5,2.5 0 0,1 11,2.5A2.5,2.5 0 0,1 13.5,5V15.5A1,1 0 0,1 12.5,16.5A1,1 0 0,1 11.5,15.5V6H10V15.5A2.5,2.5 0 0,0 12.5,18A2.5,2.5 0 0,0 15,15.5V5A4,4 0 0,0 11,1A4,4 0 0,0 7,5V17.5A5.5,5.5 0 0,0 12.5,23A5.5,5.5 0 0,0 18,17.5V6H16.5Z"/>
                         </svg>
                     </button>
-                    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="procesarImagenSeleccionada(event)" />
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;" />
                     <input type="text" id="userInput" autocomplete="off" placeholder="Escribí tu consulta..." onkeypress="handleKeyPress(event)" />
                 </div>
                 
@@ -453,7 +332,6 @@
         </div>
     </main>
 
-    <!-- MODAL DE BITÁCORA DE CULTIVO PROFESIONAL -->
     <div class="modal-overlay" id="bitacoraModal">
         <div class="modal-content">
             <h3>📋 Mi Bitácora de Cultivo</h3>
@@ -523,7 +401,6 @@
         </div>
     </div>
 
-    <!-- Script principal de la aplicación local -->
     <script src="app.js"></script>
 </body>
 </html>
