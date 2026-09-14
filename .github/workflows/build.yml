@@ -1,0 +1,41 @@
+name: Compilar APK Offline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Descargar el código del proyecto
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 3. Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 4. Instalar Capacitor y dependencias
+        run: |
+          npm install
+          npx cap init marIA cultiva.maria.app --web-dir .
+          npm install @capacitor/android
+          npx cap add android
+
+      - name: 5. Compilar el APK nativo
+        run: |
+          cd android
+          ./gradlew assembleDebug
+
+      - name: 6. Subir el APK generado
+        uses: actions/upload-artifact@v4
+        with:
+          name: maria420-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
