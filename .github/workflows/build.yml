@@ -30,7 +30,7 @@ jobs:
           echo '{
             "appId": "cultiva.maria.app",
             "appName": "marIA",
-            "webDir": ".",
+            "webDir": "",
             "bundledWebRuntime": false
           }' > capacitor.config.json
 
