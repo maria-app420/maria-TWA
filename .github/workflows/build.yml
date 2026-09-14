@@ -28,7 +28,6 @@ jobs:
       - name: 5. Organizar estructura web para Capacitor
         run: |
           mkdir -p www
-          # Movemos los archivos web a la carpeta www manteniendo carpetas como base_de_conocimiento e icons
           find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name '.github' ! -name 'node_modules' ! -name 'package.json' ! -name 'package-lock.json' -exec mv {} www/ \;
 
       - name: 6. Crear configuración de Capacitor
@@ -37,12 +36,24 @@ jobs:
             "appId": "cultiva.maria.app",
             "appName": "marIA",
             "webDir": "www",
-            "bundledWebRuntime": false
+            "bundledWebRuntime": false,
+            "server": {
+              "androidScheme": "https"
+            }
           }' > capacitor.config.json
 
-      - name: 7. Añadir plataforma Android y compilar
+      - name: 7. Añadir plataforma Android, inyectar íconos y compilar
         run: |
           npx cap add android
+          
+          if [ -d "www/icons" ]; then
+            cp -f www/icons/*.png android/app/src/main/res/mipmap-hdpi/ || true
+            cp -f www/icons/*.png android/app/src/main/res/mipmap-mdpi/ || true
+            cp -f www/icons/*.png android/app/src/main/res/mipmap-xhdpi/ || true
+            cp -f www/icons/*.png android/app/src/main/res/mipmap-xxhdpi/ || true
+            cp -f www/icons/*.png android/app/src/main/res/mipmap-xxxhdpi/ || true
+          fi
+
           npx cap sync android
           cd android
           ./gradlew assembleDebug
