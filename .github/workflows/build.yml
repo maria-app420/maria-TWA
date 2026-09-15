@@ -23,7 +23,9 @@ jobs:
           node-version: '18'
 
       - name: 4. Instalar dependencias
-        run: npm install
+        run: |
+          npm install
+          npm install -g @capacitor/assets
 
       - name: 5. Organizar estructura web para Capacitor
         run: |
@@ -42,17 +44,12 @@ jobs:
             }
           }' > capacitor.config.json
 
-      - name: 7. Añadir plataforma Android, inyectar íconos y compilar
+      - name: 7. Añadir plataforma Android, generar íconos y compilar
         run: |
           npx cap add android
           
-          if [ -d "www/icons" ]; then
-            cp -f www/icons/*.png android/app/src/main/res/mipmap-hdpi/ || true
-            cp -f www/icons/*.png android/app/src/main/res/mipmap-mdpi/ || true
-            cp -f www/icons/*.png android/app/src/main/res/mipmap-xhdpi/ || true
-            cp -f www/icons/*.png android/app/src/main/res/mipmap-xxhdpi/ || true
-            cp -f www/icons/*.png android/app/src/main/res/mipmap-xxxhdpi/ || true
-          fi
+          # Genera y reemplaza los íconos oficiales usando los recursos de la carpeta icons
+          npx capacitor-assets generate --android || true
 
           npx cap sync android
           cd android
