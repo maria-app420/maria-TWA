@@ -44,11 +44,11 @@ jobs:
             }
           }' > capacitor.config.json
 
-      - name: 7. Añadir plataforma Android, generar íconos y compilar
+      - name: 7. Añadir plataforma Android, generar íconos oficiales y compilar
         run: |
           npx cap add android
           
-          # Genera y reemplaza los íconos oficiales usando los recursos de la carpeta icons
+          # La herramienta oficial detecta automáticamente assets/icon.png en la raíz y genera todos los íconos nativos
           npx capacitor-assets generate --android || true
 
           npx cap sync android
