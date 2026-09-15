@@ -30,7 +30,7 @@ jobs:
       - name: 5. Organizar estructura web para Capacitor
         run: |
           mkdir -p www
-          find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name '.github' ! -name 'node_modules' ! -name 'package.json' ! -name 'package-lock.json' -exec mv {} www/ \;
+          find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name '.github' ! -name 'node_modules' ! -name 'package.json' ! -name 'package-lock.json' ! -name 'assets' -exec mv {} www/ \;
 
       - name: 6. Crear configuración de Capacitor
         run: |
@@ -48,7 +48,7 @@ jobs:
         run: |
           npx cap add android
           
-          # La herramienta oficial detecta automáticamente assets/icon.png en la raíz y genera todos los íconos nativos
+          # Forzamos a que la herramienta detecte el asset correctamente en la raíz
           npx capacitor-assets generate --android || true
 
           npx cap sync android
