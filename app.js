@@ -1,10 +1,17 @@
 /* ============================================================
    marIA VO - CÓDIGO UNIFICADO (MEMORIA + MANUALES LOCALES)
-   BÚSQUEDA INDEXADA POR SUB-STRINGS
+   BÚSQUEDA INDEXADA CON CARGA BAJO DEMANDA (LAZY LOAD)
    ============================================================ */
 
 let currentImageB64 = null;
 let previewObjectUrl = null;
+
+/* ------------------------------------------------------------
+   ÍNDICE LIVIANO DE CONOCIMIENTO
+   Cada entrada = 1 archivo = 1 tema. NO carga contenido, solo
+   metadata para poder matchear la consulta del usuario antes de
+   ir a buscar el archivo puntual.
+   ------------------------------------------------------------ */
 
 const INDICE_CONOCIMIENTO = [
   { archivo: "base_de_conocimiento/agua.txt", titulo: "Calidad del agua", raices: ["agua", "calidad del agua", "cloro", "dureza del agua", "agua de riego"] },
@@ -50,7 +57,7 @@ const INDICE_CONOCIMIENTO = [
   { archivo: "base_de_conocimiento/outdoor.txt", titulo: "Cultivo outdoor", raices: ["outdoor", "exterior", "aire libre", "afuera"] },
   { archivo: "base_de_conocimiento/patologias.txt", titulo: "Patologías del cultivo (diagnóstico general)", raices: ["patologia", "patologias", "enfermedad", "enfermedades", "sintoma", "sintomas", "diagnostico", "que le pasa a mi planta", "hongo"] },
   { archivo: "base_de_conocimiento/ph_ec_ppm.txt", titulo: "pH y EC/PPM", raices: ["ph", "ec", "ppm", "conductividad"] },
-  { archivo: "base_de_conocimiento/plagas.txt", titulo: "Plagas comunes", raices: ["plaga", "plagas", "araña", "mosca blanca", "trips", "bicho", "insecto"] },
+  { archivo: "base_de_conocimiento/plagas.txt", titulo: "Plagas comunes", raices: ["plaga", "plagas", "araña roja", "mosca blanca", "trips", "bicho", "insecto"] },
   { archivo: "base_de_conocimiento/riego.txt", titulo: "Riego", raices: ["riego", "regar", "regué", "reguar", "cuanto regar"] },
   { archivo: "base_de_conocimiento/scrog.txt", titulo: "SCROG (Screen of Green)", raices: ["scrog", "screen of green", "malla", "red"] },
   { archivo: "base_de_conocimiento/secado.txt", titulo: "Secado", raices: ["secado", "secar", "colgar"] },
@@ -69,10 +76,32 @@ const INDICE_CONOCIMIENTO = [
   { archivo: "base_de_conocimiento/ventilacion.txt", titulo: "Ventilación y extracción", raices: ["ventilacion", "extraccion de aire", "extractor", "intraccion"] }
 ];
 
+// Cache en memoria: una vez que se lee un archivo, no se vuelve a
+// hacer fetch de él en la misma sesión de uso de la app.
 const cacheArchivos = {};
 
+// Diccionario local offline de sinónimos para expandir la búsqueda (incluyendo plurales)
+const SINONIMOS = {
+    "raiz": ["raiz", "raíces", "lavado de raíces", "flushing", "lavar"],
+    "cosecha": ["cosecha", "cortar", "corte", "momento de corte", "madurez"],
+    "tricomas": ["tricomas", "resina", "glándulas", "lechosos", "ámbar"],
+    "plaga": ["plaga", "plagas", "botrytis", "oidio", "insectos", "araña roja"],
+    "dolor": ["dolor", "analgésico", "reuma", "fibromialgia", "neuropático"],
+    "legal": ["legal", "ley", "reprocann", "permiso", "habilitación"],
+    "esqueje": ["esqueje", "esquejes", "clon", "clones"],
+    "riego": ["riego", "reguar", "regué", "agua", "regar", "humedad", "suelo"],
+    "exceso": ["exceso", "pasé", "pase", "saturación", "encharcado", "inundado"],
+    "amarillas": ["amarillas", "amarilla", "clorosis", "decoloración"],
+    "nutricion": ["nutricion", "nutrientes", "abono", "fertilizante", "comida", "npk", "quemadas"],
+    "luz": ["luz", "foco", "led", "potencia", "calor", "fotoperiodo", "horas"],
+    "germinacion": ["germinacion", "germinar", "semilla", "semillas", "plantula"],
+    "clima": ["clima", "temperatura", "humedad", "ventilacion", "extraccion", "carpa"]
+};
+
+// Cuando la página carga por completo
 window.addEventListener('load', async () => {
     inicializarChatConMemoria();
+    inicializarIndiceConocimiento();
     setTimeout(() => {
         const splash = document.getElementById('splash-screen');
         if (splash) {
@@ -82,10 +111,88 @@ window.addEventListener('load', async () => {
     }, 1200);
 });
 
+// Inicialización del índice liviano (ya no hace fetch de nada al arrancar)
+function inicializarIndiceConocimiento() {
+    console.log(`[marIA] Índice cargado. Temas disponibles: ${INDICE_CONOCIMIENTO.length}`);
+}
+
+// Saludo inicial inteligente: recuerda nombre guardado y detecta bitácora activa
 function inicializarChatConMemoria() {
     let nombreUsuario = localStorage.getItem('maria_usuario_nombre');
-    let saludo = nombreUsuario ? `¡Hola de nuevo, **${nombreUsuario}**! 🍁 ¿Qué andás precisando consultar hoy?` : "¡Buenas! Soy marIA, tu asistente inteligente de cultivo. ¿Cómo te llamás?";
+    let saludo = "";
+
+    let datosBitacora = null;
+    try {
+        const rawBitacora = localStorage.getItem('maria_bitacora');
+        if (rawBitacora) {
+            datosBitacora = JSON.parse(rawBitacora);
+        }
+    } catch(e) {}
+
+    if (nombreUsuario && datosBitacora && datosBitacora.planta) {
+        saludo = `¡Hola de nuevo, **${nombreUsuario}**! 🍁 Veo que venís siguiendo tu planta **${datosBitacora.planta}** (${datosBitacora.etapa}). ¿Querés que revisemos la bitácora o tenés otra consulta?`;
+    } else if (nombreUsuario) {
+        saludo = `¡Hola de nuevo, **${nombreUsuario}**! 🍁 ¿Qué andás precisando consultar hoy?`;
+    } else {
+        saludo = "¡Buenas! Soy marIA, tu asistente inteligente de cultivo. ¿Cómo te llamás?";
+    }
+
     agregarElementoMensaje(saludo, 'maria');
+}
+
+// Funciones para manejar la ventana de la Bitácora
+function abrirBitacora() {
+    const rawData = localStorage.getItem('maria_bitacora');
+    if (rawData) {
+        try {
+            const data = JSON.parse(rawData);
+            if (document.getElementById('bitPlanta')) document.getElementById('bitPlanta').value = data.planta || '';
+            if (document.getElementById('bitDominancia')) document.getElementById('bitDominancia').value = data.dominancia || 'Híbrida';
+            if (document.getElementById('bitMedio')) document.getElementById('bitMedio').value = data.medio || 'Sustrato / Tierra';
+            if (document.getElementById('bitEtapa')) document.getElementById('bitEtapa').value = data.etapa || 'Vegetativo - Semana 1/2';
+            if (document.getElementById('bitPh')) document.getElementById('bitPh').value = data.ph || '';
+            if (document.getElementById('bitEc')) document.getElementById('bitEc').value = data.ec || '';
+            if (document.getElementById('bitRiego')) document.getElementById('bitRiego').value = data.riego || '';
+        } catch(e) {}
+    }
+    const modal = document.getElementById('bitacoraModal');
+    if (modal) modal.style.display = 'flex';
+}
+
+function cerrarBitacora() {
+    const modal = document.getElementById('bitacoraModal');
+    if (modal) modal.style.display = 'none';
+}
+
+function guardarBitacora() {
+    const bitacora = {
+        planta: document.getElementById('bitPlanta') ? document.getElementById('bitPlanta').value.trim() : '',
+        dominancia: document.getElementById('bitDominancia') ? document.getElementById('bitDominancia').value : '',
+        medio: document.getElementById('bitMedio') ? document.getElementById('bitMedio').value : '',
+        etapa: document.getElementById('bitEtapa') ? document.getElementById('bitEtapa').value : '',
+        ph: document.getElementById('bitPh') ? document.getElementById('bitPh').value.trim() : '',
+        ec: document.getElementById('bitEc') ? document.getElementById('bitEc').value.trim() : '',
+        riego: document.getElementById('bitRiego') ? document.getElementById('bitRiego').value.trim() : ''
+    };
+    
+    localStorage.setItem('maria_bitacora', JSON.stringify(bitacora));
+    cerrarBitacora();
+    alert("¡Bitácora de cultivo actualizada con éxito!");
+}
+
+function borrarBitacora() {
+    if (confirm("¿Estás seguro de que querés borrar los datos de tu bitácora actual?")) {
+        localStorage.removeItem('maria_bitacora');
+        
+        // Limpiar campos del modal
+        if (document.getElementById('bitPlanta')) document.getElementById('bitPlanta').value = '';
+        if (document.getElementById('bitPh')) document.getElementById('bitPh').value = '';
+        if (document.getElementById('bitEc')) document.getElementById('bitEc').value = '';
+        if (document.getElementById('bitRiego')) document.getElementById('bitRiego').value = '';
+        
+        cerrarBitacora();
+        alert("Bitácora reiniciada.");
+    }
 }
 
 function scrollChatToBottom() {
@@ -93,9 +200,11 @@ function scrollChatToBottom() {
     if (chat) chat.scrollTop = chat.scrollHeight;
 }
 
-// MOTOR DE BÚSQUEDA POR SUB-STRINGS DIRECTO
+// MOTOR DE BÚSQUEDA POR SUB-STRINGS (DEFINITIVO)
 async function buscarEnConocimiento(consulta) {
-    const textoLower = consulta.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
+    const textoLower = consulta.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, '');
 
     let archivoEncontrado = null;
     let tituloEncontrado = "";
@@ -103,6 +212,7 @@ async function buscarEnConocimiento(consulta) {
     for (let item of INDICE_CONOCIMIENTO) {
         const coincide = item.raices.some(raiz => {
             const raizNorm = raiz.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
+            // Coincidencia por sub-string puro y duro (agarra diminutivos y variaciones)
             return textoLower.includes(raizNorm);
         });
 
@@ -123,6 +233,7 @@ async function buscarEnConocimiento(consulta) {
             contenido = await response.text();
             cacheArchivos[archivoEncontrado] = contenido;
         } catch (error) {
+            console.error(`[marIA] Error al cargar: ${archivoEncontrado}`, error);
             return null;
         }
     }
@@ -134,43 +245,118 @@ async function buscarEnConocimiento(consulta) {
         .map(parrafo => `<p style="font-size: 14px; line-height: 1.5; margin-bottom: 12px;">${parrafo}</p>`)
         .join('');
 
-    return `<span style="font-size: 14px;">¡Dale, acá tenés la guía completa sobre esto:</span><br><br><span style="font-size: 15px; font-weight: bold;">📖 marIA — ${tituloEncontrado}</span><br><br>${cuerpoRespuesta}`;
+    const introsAmigables = [
+        "¡Dale, acá tenés la guía completa sobre esto:",
+        "¡Comprendido! Dejame que te comparta todo el apunte completo:",
+        "¡Ahí va! Estuve revisando el manual de punta a punta:",
+        "¡Listo, tomá nota de toda la info detallada:",
+        "¡De una! Te paso el documento completo sobre lo que consultaste:"
+    ];
+    let introAleatoria = introsAmigables[Math.floor(Math.random() * introsAmigables.length)];
+
+    return `<span style="font-size: 14px;">${introAleatoria}</span><br><br><span style="font-size: 15px; font-weight: bold;">📖 marIA — ${tituloEncontrado}</span><br><br>${cuerpoRespuesta}`;
 }
 
+// Función principal cuando el usuario envía un mensaje (CON LA LÓGICA DE NOMBRE RESTAURADA)
 async function enviarMensaje() {
     const input = document.getElementById('userInput');
     if (!input) return;
     const texto = input.value.trim();
-    if (!texto) return;
+    if (!texto && !currentImageB64) return;
 
-    agregarElementoMensaje(texto, 'user');
+    const previewUrlEnviar = previewObjectUrl;
+    currentImageB64 = null;
+    previewObjectUrl = null;
+
+    agregarElementoMensaje(texto, 'user', previewUrlEnviar);
+
     input.value = '';
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput) fileInput.value = '';
+    const imgPreview = document.getElementById('imgPreview');
+    if (imgPreview) imgPreview.src = '';
+    const previewContainer = document.getElementById('previewContainer');
+    if (previewContainer) previewContainer.style.display = 'none';
+    const clipBtn = document.getElementById('clipBtn');
+    if (clipBtn) clipBtn.classList.remove('has-file');
 
     agregarCargando();
     scrollChatToBottom();
 
     setTimeout(async () => {
         quitarCargando();
-        let respuestaFinal = await buscarEnConocimiento(texto);
+        
+        let respuestaFinal = null;
+        const textoLower = texto.toLowerCase();
+        
+        // 1. Detección natural de presentación ("soy X" o "me llamo X")
+        if (textoLower.includes('soy ') || textoLower.includes('me llamo ')) {
+            const partes = texto.split(/soy |me llamo /i);
+            if (partes[1]) {
+                let nombreDetectado = partes[1].trim().split(' ')[0];
+                nombreDetectado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
+                
+                localStorage.setItem('maria_usuario_nombre', nombreDetectado);
+                
+                respuestaFinal = `¡Un gusto, **${nombreDetectado}**! 🍁 Ya tomé nota de tu nombre. ¿Qué dudas tenés hoy con los manuales?`;
+            }
+        }
 
         if (!respuestaFinal) {
-            respuestaFinal = `No encuentro información sobre *"<i>${texto}</i>"* en mi base de conocimiento. 🌿`;
+            const palabrasUsuario = textoLower.replace(/[¿?¡!.,]/g, '').trim().split(/\s+/);
+            const primeraPalabra = palabrasUsuario[0] || "";
+
+            const esSaludo = textoLower.includes('hola') || textoLower.includes('buen dia') || textoLower.includes('que tal') || textoLower.includes('buenas');
+            
+            const palabrasCierre = ['gracias', 'genial', 'perfecto', 'listo', 'listos', 'chau'];
+            const esAgradecimientoAlInicio = palabrasCierre.includes(primeraPalabra);
+
+            let nombreUsuario = localStorage.getItem('maria_usuario_nombre') || "cultivador";
+
+            if (esSaludo) {
+                respuestaFinal = `¡Todo en orden por acá, **${nombreUsuario}**! ¿Qué andás precisando consultar hoy?`;
+            } else if (esAgradecimientoAlInicio) {
+                respuestaFinal = `¡De nada, **${nombreUsuario}**! Me alegro que haya servido. Avisame cualquier otra duda que tengas y le metemos. 🌿`;
+            } else {
+                respuestaFinal = await buscarEnConocimiento(texto);
+            }
+        }
+
+        if (!respuestaFinal) {
+            respuestaFinal = `No encuentro información sobre *"<i>${texto}</i>"* en mi base de conocimiento de CATABOOK. Podés consultarme sobre cultivo, plagas, esquejes, recetas o legislación y te buscaré la información exacta. 🌿`;
         }
         
         agregarElementoMensaje(respuestaFinal, 'maria');
         scrollChatToBottom();
-    }, 400);
+    }, 600);
 }
 
-function agregarElementoMensaje(texto, emisor) {
+function agregarElementoMensaje(texto, emisor, urlImagen = null) {
     const chat = document.getElementById('chatMessages');
     if (!chat) return;
     const div = document.createElement('div');
     div.classList.add('message', emisor);
 
-    const textContainer = document.createElement('div');
-    textContainer.innerHTML = texto;
-    div.appendChild(textContainer);
+    if (urlImagen) {
+        const img = document.createElement('img');
+        img.src = urlImagen;
+        img.className = 'chat-img';
+        div.appendChild(img);
+    }
+
+    if (emisor === 'maria') {
+        const textContainer = document.createElement('div');
+        if (typeof marked !== 'undefined') {
+            textContainer.innerHTML = marked.parse(texto);
+        } else {
+            textContainer.innerHTML = texto;
+        }
+        div.appendChild(textContainer);
+    } else if (texto) {
+        const textContainer = document.createElement('div');
+        textContainer.textContent = texto;
+        div.appendChild(textContainer);
+    }
 
     chat.appendChild(div);
 }
@@ -180,7 +366,14 @@ function agregarCargando() {
     if (chat && !document.getElementById('loadingMessage')) {
         const loadingDiv = document.createElement('div');
         loadingDiv.id = 'loadingMessage';
-        loadingDiv.innerHTML = `<span class="loading-text">Buscando</span>`;
+        loadingDiv.innerHTML = `
+            <span class="loading-text">Buscando</span>
+            <div class="neon-dots">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+            </div>
+        `;
         chat.appendChild(loadingDiv);
     }
 }
