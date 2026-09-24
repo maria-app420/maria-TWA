@@ -76,11 +76,8 @@ const INDICE_CONOCIMIENTO = [
   { archivo: "base_de_conocimiento/ventilacion.txt", titulo: "Ventilación y extracción", raices: ["ventilacion", "extraccion de aire", "extractor", "intraccion"] }
 ];
 
-// Cache en memoria: una vez que se lee un archivo, no se vuelve a
-// hacer fetch de él en la misma sesión de uso de la app.
 const cacheArchivos = {};
 
-// Diccionario local offline de sinónimos para expandir la búsqueda (incluyendo plurales)
 const SINONIMOS = {
     "raiz": ["raiz", "raíces", "lavado de raíces", "flushing", "lavar"],
     "cosecha": ["cosecha", "cortar", "corte", "momento de corte", "madurez"],
@@ -98,10 +95,10 @@ const SINONIMOS = {
     "clima": ["clima", "temperatura", "humedad", "ventilacion", "extraccion", "carpa"]
 };
 
-// Cuando la página carga por completo
 window.addEventListener('load', async () => {
     inicializarChatConMemoria();
     inicializarIndiceConocimiento();
+
     setTimeout(() => {
         const splash = document.getElementById('splash-screen');
         if (splash) {
@@ -111,12 +108,10 @@ window.addEventListener('load', async () => {
     }, 1200);
 });
 
-// Inicialización del índice liviano (ya no hace fetch de nada al arrancar)
 function inicializarIndiceConocimiento() {
     console.log(`[marIA] Índice cargado. Temas disponibles: ${INDICE_CONOCIMIENTO.length}`);
 }
 
-// Saludo inicial inteligente: recuerda nombre guardado y detecta bitácora activa
 function inicializarChatConMemoria() {
     let nombreUsuario = localStorage.getItem('maria_usuario_nombre');
     let saludo = "";
@@ -140,12 +135,13 @@ function inicializarChatConMemoria() {
     agregarElementoMensaje(saludo, 'maria');
 }
 
-// Funciones para manejar la ventana de la Bitácora
 function abrirBitacora() {
     const rawData = localStorage.getItem('maria_bitacora');
+
     if (rawData) {
         try {
             const data = JSON.parse(rawData);
+
             if (document.getElementById('bitPlanta')) document.getElementById('bitPlanta').value = data.planta || '';
             if (document.getElementById('bitDominancia')) document.getElementById('bitDominancia').value = data.dominancia || 'Híbrida';
             if (document.getElementById('bitMedio')) document.getElementById('bitMedio').value = data.medio || 'Sustrato / Tierra';
@@ -155,6 +151,7 @@ function abrirBitacora() {
             if (document.getElementById('bitRiego')) document.getElementById('bitRiego').value = data.riego || '';
         } catch(e) {}
     }
+
     const modal = document.getElementById('bitacoraModal');
     if (modal) modal.style.display = 'flex';
 }
@@ -174,7 +171,7 @@ function guardarBitacora() {
         ec: document.getElementById('bitEc') ? document.getElementById('bitEc').value.trim() : '',
         riego: document.getElementById('bitRiego') ? document.getElementById('bitRiego').value.trim() : ''
     };
-    
+
     localStorage.setItem('maria_bitacora', JSON.stringify(bitacora));
     cerrarBitacora();
     alert("¡Bitácora de cultivo actualizada con éxito!");
@@ -183,13 +180,12 @@ function guardarBitacora() {
 function borrarBitacora() {
     if (confirm("¿Estás seguro de que querés borrar los datos de tu bitácora actual?")) {
         localStorage.removeItem('maria_bitacora');
-        
-        // Limpiar campos del modal
+
         if (document.getElementById('bitPlanta')) document.getElementById('bitPlanta').value = '';
         if (document.getElementById('bitPh')) document.getElementById('bitPh').value = '';
         if (document.getElementById('bitEc')) document.getElementById('bitEc').value = '';
         if (document.getElementById('bitRiego')) document.getElementById('bitRiego').value = '';
-        
+
         cerrarBitacora();
         alert("Bitácora reiniciada.");
     }
@@ -200,83 +196,333 @@ function scrollChatToBottom() {
     if (chat) chat.scrollTop = chat.scrollHeight;
 }
 
-// MOTOR DE BÚSQUEDA POR SUB-STRINGS (DEFINITIVO)
-async function buscarEnConocimiento(consulta) {
-    const textoLower = consulta.toLowerCase()
+/* ============================================================
+   MOTOR DE BÚSQUEDA CORREGIDO
+   ============================================================ */
+
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, '');
-
-    let archivoEncontrado = null;
-    let tituloEncontrado = "";
-
-    for (let item of INDICE_CONOCIMIENTO) {
-        const coincide = item.raices.some(raiz => {
-            const raizNorm = raiz.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '');
-            // Coincidencia por sub-string puro y duro (agarra diminutivos y variaciones)
-            return textoLower.includes(raizNorm);
-        });
-
-        if (coincide) {
-            archivoEncontrado = item.archivo;
-            tituloEncontrado = item.titulo;
-            break; 
-        }
-    }
-
-    if (!archivoEncontrado) return null;
-
-    let contenido = cacheArchivos[archivoEncontrado];
-    if (!contenido) {
-        try {
-            const response = await fetch(encodeURI(archivoEncontrado));
-            if (!response.ok) return null;
-            contenido = await response.text();
-            cacheArchivos[archivoEncontrado] = contenido;
-        } catch (error) {
-            console.error(`[marIA] Error al cargar: ${archivoEncontrado}`, error);
-            return null;
-        }
-    }
-
-    let textoLimpio = contenido.replace(/[*_#`=-]/g, '').trim();
-    let fragmentos = textoLimpio.split(/\n\s*\n/).map(f => f.trim()).filter(f => f.length > 15);
-
-    let cuerpoRespuesta = fragmentos
-        .map(parrafo => `<p style="font-size: 14px; line-height: 1.5; margin-bottom: 12px;">${parrafo}</p>`)
-        .join('');
-
-    const introsAmigables = [
-        "¡Dale, acá tenés la guía completa sobre esto:",
-        "¡Comprendido! Dejame que te comparta todo el apunte completo:",
-        "¡Ahí va! Estuve revisando el manual de punta a punta:",
-        "¡Listo, tomá nota de toda la info detallada:",
-        "¡De una! Te paso el documento completo sobre lo que consultaste:"
-    ];
-    let introAleatoria = introsAmigables[Math.floor(Math.random() * introsAmigables.length)];
-
-    return `<span style="font-size: 14px;">${introAleatoria}</span><br><br><span style="font-size: 15px; font-weight: bold;">📖 marIA — ${tituloEncontrado}</span><br><br>${cuerpoRespuesta}`;
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^\w\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
 }
 
-// Función principal cuando el usuario envía un mensaje
+function escaparRegExp(texto) {
+    return texto.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function puntuarFragmentoBusqueda(fragmento, conceptos, consultaNormalizada) {
+    const texto = normalizarTexto(fragmento);
+
+    if (!texto) return 0;
+
+    let score = 0;
+
+    if (consultaNormalizada.length >= 8 && texto.includes(consultaNormalizada)) {
+        score += 80;
+    }
+
+    const encontrados = conceptos.filter(concepto => {
+        if (concepto.length <= 2) {
+            return new RegExp(`\\b${escaparRegExp(concepto)}\\b`, 'i').test(texto);
+        }
+
+        return texto.includes(concepto);
+    });
+
+    encontrados.forEach(concepto => {
+        score += concepto.length >= 6 ? 12 : 6;
+    });
+
+    if (encontrados.length >= 2) score += 25;
+    if (encontrados.length >= 3) score += 35;
+
+    return score;
+}
+
+async function buscarEnConocimiento(consulta) {
+    const consultaNormalizada = normalizarTexto(consulta);
+
+    if (!consultaNormalizada) return null;
+
+    const STOPWORDS = new Set([
+        "que", "como", "cual", "cuales",
+        "para", "por", "con", "sin", "una", "uno", "unos", "unas",
+        "los", "las", "del", "de", "la", "el", "en", "un", "y",
+        "es", "son", "se", "me", "mi", "mis", "tu", "tus",
+        "hay", "puedo", "puede", "debo", "deberia",
+        "tengo", "tiene", "hacer", "hago", "hacerlo", "sobre",
+        "donde", "cuando", "esta", "este", "esto",
+        "esa", "ese", "eso", "muy", "mas", "al", "lo"
+    ]);
+
+    const palabras = consultaNormalizada
+        .split(/\s+/)
+        .filter(p => p.length > 2 && !STOPWORDS.has(p));
+
+    if (palabras.length === 0) return null;
+
+    const conceptos = new Set(palabras);
+
+    palabras.forEach(palabra => {
+        for (const clave in SINONIMOS) {
+            const grupo = SINONIMOS[clave].map(normalizarTexto);
+
+            if (
+                clave === palabra ||
+                grupo.includes(palabra) ||
+                grupo.some(sinonimo =>
+                    sinonimo.includes(palabra) || palabra.includes(sinonimo)
+                )
+            ) {
+                conceptos.add(normalizarTexto(clave));
+
+                grupo.forEach(sinonimo => {
+                    if (sinonimo.length > 3 && sinonimo.split(' ').length === 1) {
+                        conceptos.add(sinonimo);
+                    }
+                });
+            }
+        }
+    });
+
+    const conceptosArray = [...conceptos];
+
+    /* ---------------------------------------------------------
+       PASO 1:
+       Buscar TODOS los candidatos.
+       --------------------------------------------------------- */
+
+    const candidatos = INDICE_CONOCIMIENTO
+        .map(item => {
+            const titulo = normalizarTexto(item.titulo);
+            const raices = item.raices.map(normalizarTexto);
+
+            let score = 0;
+            let coincidenciasFuertes = 0;
+
+            raices.forEach(raiz => {
+                if (!raiz) return;
+
+                if (consultaNormalizada.includes(raiz)) {
+                    score += 100 + Math.min(raiz.length, 30);
+                    coincidenciasFuertes++;
+                }
+
+                if (titulo === raiz) {
+                    score += 70;
+                } else if (titulo.includes(raiz)) {
+                    score += 35;
+                }
+            });
+
+            conceptosArray.forEach(concepto => {
+                if (!concepto) return;
+
+                if (titulo === concepto) {
+                    score += 80;
+                    coincidenciasFuertes++;
+                } else if (titulo.includes(concepto)) {
+                    score += 35;
+                }
+
+                raices.forEach(raiz => {
+                    if (raiz === concepto) {
+                        score += 55;
+                        coincidenciasFuertes++;
+                    } else if (
+                        raiz.length >= 4 &&
+                        (raiz.includes(concepto) || concepto.includes(raiz))
+                    ) {
+                        score += 15;
+                    }
+                });
+            });
+
+            const conceptosCoincidentes = conceptosArray.filter(concepto =>
+                raices.some(raiz =>
+                    raiz === concepto ||
+                    (
+                        raiz.length >= 4 &&
+                        (raiz.includes(concepto) || concepto.includes(raiz))
+                    )
+                )
+            );
+
+            if (conceptosCoincidentes.length >= 2) score += 45;
+            if (conceptosCoincidentes.length >= 3) score += 50;
+
+            return {
+                ...item,
+                score,
+                coincidenciasFuertes,
+                conceptosCoincidentes
+            };
+        })
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score);
+
+    if (candidatos.length === 0) return null;
+
+    /* ---------------------------------------------------------
+       PASO 2:
+       Se revisan los mejores candidatos dentro de sus TXT.
+       --------------------------------------------------------- */
+
+    const candidatosParaLeer = candidatos.slice(0, 5);
+    const evidencias = [];
+
+    for (const candidato of candidatosParaLeer) {
+        let contenido = cacheArchivos[candidato.archivo];
+
+        if (!contenido) {
+            try {
+                const response = await fetch(encodeURI(candidato.archivo));
+
+                if (!response.ok) {
+                    console.error(`[marIA] No se pudo cargar: ${candidato.archivo}`);
+                    continue;
+                }
+
+                contenido = await response.text();
+                cacheArchivos[candidato.archivo] = contenido;
+            } catch (error) {
+                console.error(`[marIA] Error al cargar: ${candidato.archivo}`, error);
+                continue;
+            }
+        }
+
+        const contenidoNormalizado = normalizarTexto(contenido);
+
+        let evidenciaScore = 0;
+
+        conceptosArray.forEach(concepto => {
+            if (concepto.length <= 2) {
+                if (
+                    new RegExp(
+                        `\\b${escaparRegExp(concepto)}\\b`,
+                        'i'
+                    ).test(contenidoNormalizado)
+                ) {
+                    evidenciaScore += 8;
+                }
+            } else if (contenidoNormalizado.includes(concepto)) {
+                evidenciaScore += concepto.length >= 6 ? 15 : 8;
+            }
+        });
+
+        if (
+            consultaNormalizada.length >= 8 &&
+            contenidoNormalizado.includes(consultaNormalizada)
+        ) {
+            evidenciaScore += 80;
+        }
+
+        const fragmentos = contenido
+            .split(/\n\s*\n/)
+            .map(f => f.trim())
+            .filter(f => f.length > 30);
+
+        const fragmentosPuntuados = fragmentos
+            .map(fragmento => ({
+                texto: fragmento,
+                score: puntuarFragmentoBusqueda(
+                    fragmento,
+                    conceptosArray,
+                    consultaNormalizada
+                )
+            }))
+            .filter(f => f.score > 0)
+            .sort((a, b) => b.score - a.score);
+
+        const mejorFragmento = fragmentosPuntuados[0] || null;
+
+        if (mejorFragmento) {
+            evidenciaScore += mejorFragmento.score;
+        }
+
+        evidencias.push({
+            ...candidato,
+            contenido,
+            evidenciaScore,
+            mejorFragmento
+        });
+    }
+
+    if (evidencias.length === 0) return null;
+
+    /* ---------------------------------------------------------
+       PASO 3:
+       Ganador final con el texto completo conservado.
+       --------------------------------------------------------- */
+
+    evidencias.sort((a, b) => {
+        const totalA = a.score + a.evidenciaScore;
+        const totalB = b.score + b.evidenciaScore;
+
+        return totalB - totalA;
+    });
+
+    const mejor = evidencias[0];
+    const puntajeFinal = mejor.score + mejor.evidenciaScore;
+
+    if (!mejor.mejorFragmento || puntajeFinal < 25) {
+        console.log(
+            `[marIA] Match insuficiente. ` +
+            `Mejor archivo: ${mejor.archivo} | ` +
+            `Puntaje: ${puntajeFinal}`
+        );
+
+        return null;
+    }
+
+    const textoFragmento = mejor.mejorFragmento.texto.trim();
+
+    console.log(
+        `[marIA] Consulta: "${consulta}" | ` +
+        `Archivo elegido: ${mejor.archivo} | ` +
+        `Score índice: ${mejor.score} | ` +
+        `Evidencia: ${mejor.evidenciaScore} | ` +
+        `Total: ${puntajeFinal}`
+    );
+
+    return `📖 **marIA — ${mejor.titulo}**\n\n${textoFragmento}`;
+}
+
+/* ============================================================
+   ENVÍO DE MENSAJES
+   ============================================================ */
+
 async function enviarMensaje() {
     const input = document.getElementById('userInput');
+
     if (!input) return;
+
     const texto = input.value.trim();
+
     if (!texto && !currentImageB64) return;
 
     const previewUrlEnviar = previewObjectUrl;
+
     currentImageB64 = null;
     previewObjectUrl = null;
 
     agregarElementoMensaje(texto, 'user', previewUrlEnviar);
 
     input.value = '';
+
     const fileInput = document.getElementById('fileInput');
     if (fileInput) fileInput.value = '';
+
     const imgPreview = document.getElementById('imgPreview');
     if (imgPreview) imgPreview.src = '';
+
     const previewContainer = document.getElementById('previewContainer');
     if (previewContainer) previewContainer.style.display = 'none';
+
     const clipBtn = document.getElementById('clipBtn');
     if (clipBtn) clipBtn.classList.remove('has-file');
 
@@ -285,77 +531,132 @@ async function enviarMensaje() {
 
     setTimeout(async () => {
         quitarCargando();
-        
+
         let respuestaFinal = null;
         const textoLower = texto.toLowerCase();
-        
-        // Detección natural de presentación ("soy X" o "me llamo X")
-        if (textoLower.includes('soy ') || textoLower.includes('me llamo ')) {
+
+        if (
+            textoLower.includes('soy ') ||
+            textoLower.includes('me llamo ')
+        ) {
             const partes = texto.split(/soy |me llamo /i);
+
             if (partes[1]) {
-                let nombreDetectado = partes[1].trim().split(' ')[0];
-                nombreDetectado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
-                
-                localStorage.setItem('maria_usuario_nombre', nombreDetectado);
-                
-                respuestaFinal = `¡Un gusto, **${nombreDetectado}**! 🍁 Ya tomé nota de tu nombre. ¿Qué dudas tenés hoy con los manuales?`;
+                let nombreDetectado = partes[1]
+                    .trim()
+                    .split(' ')[0];
+
+                nombreDetectado =
+                    nombreDetectado.charAt(0).toUpperCase() +
+                    nombreDetectado.slice(1);
+
+                localStorage.setItem(
+                    'maria_usuario_nombre',
+                    nombreDetectado
+                );
+
+                respuestaFinal =
+                    `¡Un gusto, **${nombreDetectado}**! 🍁 ` +
+                    `Ya tomé nota de tu nombre. ` +
+                    `¿Qué dudas tenés hoy con los manuales?`;
             }
         }
 
         if (!respuestaFinal) {
-            const palabrasUsuario = textoLower.replace(/[¿?¡!.,]/g, '').trim().split(/\s+/);
+            const palabrasUsuario = textoLower
+                .replace(/[¿?¡!.,]/g, '')
+                .trim()
+                .split(/\s+/);
+
             const primeraPalabra = palabrasUsuario[0] || "";
 
-            const esSaludo = textoLower.includes('hola') || textoLower.includes('buen dia') || textoLower.includes('que tal') || textoLower.includes('buenas');
-            
-            // Evaluamos si las palabras de agradecimiento o cierre están estrictamente al principio
-            const palabrasCierre = ['gracias', 'genial', 'perfecto', 'listo', 'listos', 'chau'];
-            const esAgradecimientoAlInicio = palabrasCierre.includes(primeraPalabra);
+            const esSaludo =
+                textoLower.includes('hola') ||
+                textoLower.includes('buen dia') ||
+                textoLower.includes('que tal') ||
+                textoLower.includes('buenas');
 
-            let nombreUsuario = localStorage.getItem('maria_usuario_nombre') || "cultivador";
+            const palabrasCierre = [
+                'gracias',
+                'genial',
+                'perfecto',
+                'listo',
+                'listos',
+                'chau'
+            ];
+
+            const esAgradecimientoAlInicio =
+                palabrasCierre.includes(primeraPalabra);
+
+            const nombreUsuario =
+                localStorage.getItem('maria_usuario_nombre') ||
+                "cultivador";
 
             if (esSaludo) {
-                respuestaFinal = `¡Todo en orden por acá, **${nombreUsuario}**!. ¿Qué andás precisando consultar hoy?`;
+                respuestaFinal =
+                    `¡Todo en orden por acá, **${nombreUsuario}**!. ` +
+                    `¿Qué andás precisando consultar hoy?`;
             } else if (esAgradecimientoAlInicio) {
-                respuestaFinal = `¡De nada, **${nombreUsuario}**! Me alegro que haya servido. Avisame cualquier otra duda que tengas y le metemos. 🌿`;
+                respuestaFinal =
+                    `¡De nada, **${nombreUsuario}**! ` +
+                    `Me alegro que haya servido. ` +
+                    `Avisame cualquier otra duda que tengas y le metemos. 🌿`;
             } else {
                 respuestaFinal = await buscarEnConocimiento(texto);
             }
         }
 
         if (!respuestaFinal) {
-            respuestaFinal = `No encuentro información sobre *"<i>${texto}</i>"* en mi base de conocimiento de CATABOOK. Podés consultarme sobre cultivo, plagas, esquejes, recetas o legislación y te buscaré la información exacta. 🌿`;
+            respuestaFinal =
+                `No encuentro información sobre *"<i>${texto}</i>"* ` +
+                `en mi base de conocimiento de CATABOOK. ` +
+                `Podés consultarme sobre cultivo, plagas, esquejes, ` +
+                `recetas o legislación y te buscaré la información exacta. 🌿`;
         }
-        
+
         agregarElementoMensaje(respuestaFinal, 'maria');
         scrollChatToBottom();
+
     }, 600);
 }
 
+/* ============================================================
+   MENSAJES
+   ============================================================ */
+
 function agregarElementoMensaje(texto, emisor, urlImagen = null) {
     const chat = document.getElementById('chatMessages');
+
     if (!chat) return;
+
     const div = document.createElement('div');
     div.classList.add('message', emisor);
 
     if (urlImagen) {
         const img = document.createElement('img');
+
         img.src = urlImagen;
         img.className = 'chat-img';
+
         div.appendChild(img);
     }
 
     if (emisor === 'maria') {
         const textContainer = document.createElement('div');
+
         if (typeof marked !== 'undefined') {
             textContainer.innerHTML = marked.parse(texto);
         } else {
             textContainer.innerHTML = texto;
         }
+
         div.appendChild(textContainer);
+
     } else if (texto) {
         const textContainer = document.createElement('div');
+
         textContainer.textContent = texto;
+
         div.appendChild(textContainer);
     }
 
@@ -364,9 +665,12 @@ function agregarElementoMensaje(texto, emisor, urlImagen = null) {
 
 function agregarCargando() {
     const chat = document.getElementById('chatMessages');
+
     if (chat && !document.getElementById('loadingMessage')) {
         const loadingDiv = document.createElement('div');
+
         loadingDiv.id = 'loadingMessage';
+
         loadingDiv.innerHTML = `
             <span class="loading-text">Buscando</span>
             <div class="neon-dots">
@@ -375,12 +679,14 @@ function agregarCargando() {
                 <span class="dot dot-3"></span>
             </div>
         `;
+
         chat.appendChild(loadingDiv);
     }
 }
 
 function quitarCargando() {
     const loading = document.getElementById('loadingMessage');
+
     if (loading) loading.remove();
 }
 
